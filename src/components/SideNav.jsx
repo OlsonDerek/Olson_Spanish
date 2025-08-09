@@ -111,7 +111,7 @@ export function SideNav({
                 <div className="nav-item-actions">
                   <SelectionBubble
                     state={selectionStates.courses?.[course.id] || 'none'}
-                    onClick={(e) => { e.stopPropagation(); onCourseSelect(course.id); onCourseToggle(course.id) }}
+                    onClick={(e) => { e.stopPropagation(); onCourseToggle(course.id) }}
                     size="medium"
                   />
                   {isCourseFullyReviewed(course) && (<div className="reviewed-indicator"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg></div>)}
@@ -135,7 +135,7 @@ export function SideNav({
                           <div className="nav-item-actions">
                             <SelectionBubble
                               state={selectionStates.units?.[unit.id] || 'none'}
-                              onClick={(e) => { e.stopPropagation(); onUnitSelect(unit.id); onUnitToggle(unit.id) }}
+                              onClick={(e) => { e.stopPropagation(); onUnitToggle(unit.id) }}
                               size="medium"
                             />
                             {isUnitFullyReviewed(unit) && (<div className="reviewed-indicator"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg></div>)}
@@ -156,7 +156,11 @@ export function SideNav({
                                 <div className="nav-item-actions">
                                   <SelectionBubble
                                     state={selectionStates.weeks?.[week.id] ? 'selected' : 'none'}
-                                    onClick={(e) => { e.stopPropagation(); onWeekSelect(week.id); onWeekToggle(week.id) }}
+                                    onClick={(e) => { 
+                                      e.stopPropagation(); 
+                                      // onWeekSelect(week.id); 
+                                      onWeekToggle(week.id) 
+                                    }}
                                     size="small"
                                   />
                                   {isWeekFullyReviewed(week) && (<div className="reviewed-indicator"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg></div>)}
