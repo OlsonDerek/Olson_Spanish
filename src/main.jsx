@@ -1,5 +1,6 @@
 import { render } from 'preact'
-import { App } from './app.jsx'
+// NOTE: File name is 'App.jsx' (capital A). Linux (Vercel) is case-sensitive.
+import { App } from './App.jsx'
 import './index.css'
 
 render(<App />, document.getElementById('app'))
