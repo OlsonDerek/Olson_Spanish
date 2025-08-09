@@ -151,7 +151,7 @@ export function SideNav({
                               >
                                 <div className="nav-item-content">
                                   <h6 className="nav-item-title">{week.title}</h6>
-                                  <p className="nav-item-meta">{week.dateRange}</p>
+                                  <p className="nav-item-meta">{formatWeekRange(week)}</p>
                                 </div>
                                 <div className="nav-item-actions">
                                   <SelectionBubble
@@ -180,4 +180,20 @@ export function SideNav({
       </div>
     </nav>
   )
+}
+
+function formatWeekRange(week) {
+  if (week.startDate && week.endDate) {
+    try {
+      const s = new Date(week.startDate)
+      const e = new Date(week.endDate)
+      const sameMonth = s.getMonth() === e.getMonth()
+      const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'short' })
+      const sm = monthFmt.format(s)
+      const em = monthFmt.format(e)
+      const y = s.getFullYear()
+      return sameMonth ? `${sm} ${s.getDate()}–${e.getDate()}, ${y}` : `${sm} ${s.getDate()} – ${em} ${e.getDate()}, ${y}`
+    } catch {}
+  }
+  return week.dateRange || ''
 }

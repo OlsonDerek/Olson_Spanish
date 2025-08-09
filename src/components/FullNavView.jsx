@@ -100,7 +100,7 @@ export function FullNavView({
                             <button key={week.id} className={`week-card ${currentWeekId === week.id ? 'current' : ''} ${selectionStates.weeks?.[week.id] ? 'selected' : ''}`} onClick={() => onWeekToggle(week.id)}>
                               <div className="week-card-content">
                                 <h5 className="week-title">{week.title}</h5>
-                                <p className="week-dates">{week.dateRange}</p>
+                                  <p className="week-dates">{formatWeekRange(week)}</p>
                               </div>
                               <div className="week-actions">
                                 <SelectionBubble
@@ -134,3 +134,19 @@ export function FullNavView({
     </div>
   )
 }
+
+  function formatWeekRange(week) {
+    if (week.startDate && week.endDate) {
+      try {
+        const s = new Date(week.startDate)
+        const e = new Date(week.endDate)
+        const sameMonth = s.getMonth() === e.getMonth()
+        const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'short' })
+        const sm = monthFmt.format(s)
+        const em = monthFmt.format(e)
+        const y = s.getFullYear()
+        return sameMonth ? `${sm} ${s.getDate()}–${e.getDate()}, ${y}` : `${sm} ${s.getDate()} – ${em} ${e.getDate()}, ${y}`
+      } catch {}
+    }
+    return week.dateRange || ''
+  }

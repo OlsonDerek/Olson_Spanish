@@ -1,0 +1,36 @@
+{
+  "id": "2025-08-04",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 1: Saludos",
+  "startDate": "2025-08-04",
+  "endDate": "2025-08-10",
+  "vocab": [
+    { "id": "hola", "spanish": "hola", "english": "hello", "type": "interjection" },
+    { "id": "adios", "spanish": "adiós", "english": "goodbye", "type": "interjection" },
+    {
+      "id": "ser",
+      "spanish": "ser",
+      "english": "to be (essential)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "soy", "tú": "eres", "él/ella": "es", "nosotros": "somos", "vosotros": "sois", "ellos": "son" },
+        "preterite": { "yo": "fui", "tú": "fuiste", "él/ella": "fue", "nosotros": "fuimos", "vosotros": "fuisteis", "ellos": "fueron" }
+      }
+    },
+    {
+      "id": "estar",
+      "spanish": "estar",
+      "english": "to be (temporary)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "estoy", "tú": "estás", "él/ella": "está", "nosotros": "estamos", "vosotros": "estáis", "ellos": "están" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Hola, ¿cómo estás?", "english": "Hi, how are you?", "audioUrl": "" },
+    { "id": "p2", "spanish": "Yo soy estudiante.", "english": "I am a student.", "audioUrl": "" },
+    { "id": "p3", "spanish": "Adiós, hasta mañana.", "english": "Goodbye, see you tomorrow.", "audioUrl": "" }
+  ]
+}

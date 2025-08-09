@@ -26,7 +26,8 @@
             {
               "id": "",
               "title": "",
-              "dateRange": "",
+              "startDate": "",
+              "endDate": "",
               "vocab": [
                 {
                   "id": "",

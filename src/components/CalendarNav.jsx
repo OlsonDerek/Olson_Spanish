@@ -11,17 +11,13 @@ export function CalendarNav({ isOpen, weeks, currentWeekId, onWeekSelect, onClos
     const year = currentMonth.getFullYear()
     
     // Filter weeks that fall within the current month view
-    const monthWeeks = weeks.filter(week => {
-      // Parse the week's start date from the dateRange
-      const dateMatch = week.dateRange.match(/(\w+)\s+(\d+)/)
-      if (!dateMatch) return false
-      
-      const [, monthStr, day] = dateMatch
-      const weekDate = new Date(`${monthStr} ${day}, ${year}`)
-      
-      return weekDate.getMonth() === currentMonth.getMonth() && 
-             weekDate.getFullYear() === currentMonth.getFullYear()
-    })
+    const monthWeeks = weeks
+      .filter(week => {
+        if (!week.startDate) return false
+        const start = new Date(week.startDate)
+        return start.getMonth() === currentMonth.getMonth() && start.getFullYear() === currentMonth.getFullYear()
+      })
+      .sort((a,b) => new Date(a.startDate) - new Date(b.startDate))
 
     return { weeks: monthWeeks, monthName, year: year.toString() }
   }, [weeks, currentMonth])
@@ -81,7 +77,7 @@ export function CalendarNav({ isOpen, weeks, currentWeekId, onWeekSelect, onClos
 
         <div className="calendar-weeks">
           {monthData.weeks.length > 0 ? (
-            monthData.weeks.map((week) => (
+    monthData.weeks.map((week) => (
               <button
                 key={week.id}
                 className={`calendar-week-item ${currentWeekId === week.id ? 'active' : ''}`}
@@ -89,7 +85,7 @@ export function CalendarNav({ isOpen, weeks, currentWeekId, onWeekSelect, onClos
               >
                 <div className="week-info">
                   <h5 className="week-title">{week.title}</h5>
-                  <p className="week-dates">{week.dateRange}</p>
+      <p className="week-dates">{formatRange(week)}</p>
                 </div>
                 {currentWeekId === week.id && (
                   <div className="active-indicator">
@@ -109,4 +105,20 @@ export function CalendarNav({ isOpen, weeks, currentWeekId, onWeekSelect, onClos
       </div>
     </div>
   )
+}
+
+function formatRange(week) {
+  if (week.startDate && week.endDate) {
+    try {
+      const start = new Date(week.startDate)
+      const end = new Date(week.endDate)
+      const sameMonth = start.getMonth() === end.getMonth()
+      const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'short' })
+      const sm = monthFmt.format(start)
+      const em = monthFmt.format(end)
+      const y = start.getFullYear()
+      return sameMonth ? `${sm} ${start.getDate()}–${end.getDate()}, ${y}` : `${sm} ${start.getDate()} – ${em} ${end.getDate()}, ${y}`
+    } catch {}
+  }
+  return week.dateRange || ''
 }

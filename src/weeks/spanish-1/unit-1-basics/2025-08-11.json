@@ -1,0 +1,25 @@
+{
+  "id": "2025-08-11",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 2: En la Escuela",
+  "startDate": "2025-08-11",
+  "endDate": "2025-08-17",
+  "vocab": [
+    { "id": "lapiz", "spanish": "lápiz", "english": "pencil", "type": "noun" },
+    { "id": "libro", "spanish": "libro", "english": "book", "type": "noun" },
+    {
+      "id": "estudiar",
+      "spanish": "estudiar",
+      "english": "to study",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "estudio", "tú": "estudias", "él/ella": "estudia", "nosotros": "estudiamos", "vosotros": "estudiáis", "ellos": "estudian" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Necesito un lápiz.", "english": "I need a pencil.", "audioUrl": "" },
+    { "id": "p2", "spanish": "Yo estudio español cada día.", "english": "I study Spanish every day.", "audioUrl": "" }
+  ]
+}

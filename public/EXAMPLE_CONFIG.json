@@ -26,7 +26,8 @@
             {
               "id": "2025-08-04",
               "title": "Week 1: Saludos y Presentaciones",
-              "dateRange": "Aug 4–10, 2025",
+              "startDate": "2025-08-04",
+              "endDate": "2025-08-10",
               "vocab": [
                 {
                   "id": "hola",
@@ -105,7 +106,8 @@
             {
               "id": "2025-08-11",
               "title": "Week 2: Números y Colores", 
-              "dateRange": "Aug 11–17, 2025",
+              "startDate": "2025-08-11",
+              "endDate": "2025-08-17",
               "vocab": [
                 {
                   "id": "uno",
@@ -151,7 +153,8 @@
             {
               "id": "2025-08-18",
               "title": "Week 3: En la Escuela",
-              "dateRange": "Aug 18–24, 2025",
+              "startDate": "2025-08-18",
+              "endDate": "2025-08-24",
               "vocab": [
                 {
                   "id": "lapiz",
@@ -214,7 +217,8 @@
             {
               "id": "2025-09-01",
               "title": "Week 4: La Familia",
-              "dateRange": "Sep 1–7, 2025",
+              "startDate": "2025-09-01",
+              "endDate": "2025-09-07",
               "vocab": [
                 {
                   "id": "madre",

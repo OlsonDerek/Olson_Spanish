@@ -22,34 +22,57 @@ export function useConfig() {
         let processedConfig
         
         if (configData.courses) {
-          // New hierarchical format
+          // Hierarchical format with external week files
           processedConfig = {
             app: configData.app,
             courses: configData.courses,
             units: [],
             weeks: []
           }
-          
-          // Flatten courses and units for easy access
+
+          // Flatten units (weeks will be populated from external files)
           configData.courses.forEach(course => {
             course.units.forEach(unit => {
               processedConfig.units.push({
                 ...unit,
                 courseId: course.id,
-                courseTitle: course.title
+                courseTitle: course.title,
+                weeks: []
               })
-              
-              unit.weeks.forEach(week => {
+            })
+          })
+
+          try {
+            const weekModules = import.meta.glob('../weeks/**/*.json', { eager: true })
+            const weekObjects = Object.values(weekModules).map(m => m.default || m)
+
+            if (weekObjects.length) {
+              const unitIndex = {}
+              processedConfig.courses.forEach(course => {
+                course.units.forEach(unit => {
+                  unitIndex[unit.id] = { unit, course }
+                })
+              })
+
+              weekObjects.forEach(week => {
+                const ref = unitIndex[week.unitId]
+                if (!ref) {
+                  console.warn('Week references unknown unitId', week.unitId, 'in', week.id)
+                  return
+                }
+                const { unit, course } = ref
+                unit.weeks.push(week)
                 processedConfig.weeks.push({
                   ...week,
-                  unitId: unit.id,
                   unitTitle: unit.title,
                   courseId: course.id,
                   courseTitle: course.title
                 })
               })
-            })
-          })
+            }
+          } catch (e) {
+            console.error('Error loading week modules', e)
+          }
         } else if (configData.weeks) {
           // Legacy flat format - convert to new format
           processedConfig = {
