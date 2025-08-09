@@ -1,0 +1,300 @@
+{
+    "id": "2025-08-18",
+    "courseId": "spanish-1",
+    "unitId": "unit-1-basics",
+    "title": "Week 3: Family & Basics Review",
+    "startDate": "2025-08-18",
+    "endDate": "2025-08-24",
+    "vocab": [
+        {
+            "id": "familia",
+            "spanish": "familia",
+            "english": "family",
+            "type": "noun"
+        },
+        {
+            "id": "madre",
+            "spanish": "madre",
+            "english": "mother",
+            "type": "noun"
+        },
+        {
+            "id": "padre",
+            "spanish": "padre",
+            "english": "father",
+            "type": "noun"
+        },
+        {
+            "id": "hermano",
+            "spanish": "hermano",
+            "english": "brother",
+            "type": "noun"
+        },
+        {
+            "id": "hermana",
+            "spanish": "hermana",
+            "english": "sister",
+            "type": "noun"
+        },
+        {
+            "id": "amigo",
+            "spanish": "amigo",
+            "english": "friend (male)",
+            "type": "noun"
+        },
+        {
+            "id": "amiga",
+            "spanish": "amiga",
+            "english": "friend (female)",
+            "type": "noun"
+        },
+        {
+            "id": "clase",
+            "spanish": "clase",
+            "english": "class",
+            "type": "noun"
+        },
+        {
+            "id": "casa",
+            "spanish": "casa",
+            "english": "house",
+            "type": "noun"
+        },
+        {
+            "id": "escuela",
+            "spanish": "escuela",
+            "english": "school",
+            "type": "noun"
+        },
+        {
+            "id": "ciudad",
+            "spanish": "ciudad",
+            "english": "city",
+            "type": "noun"
+        },
+        {
+            "id": "perro",
+            "spanish": "perro",
+            "english": "dog",
+            "type": "noun"
+        },
+        {
+            "id": "gato",
+            "spanish": "gato",
+            "english": "cat",
+            "type": "noun"
+        },
+        {
+            "id": "comida",
+            "spanish": "comida",
+            "english": "food",
+            "type": "noun"
+        },
+        {
+            "id": "tener",
+            "spanish": "tener",
+            "english": "to have",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "tengo",
+                    "tú": "tienes",
+                    "él/ella": "tiene",
+                    "nosotros": "tenemos",
+                    "vosotros": "tenéis",
+                    "ellos": "tienen"
+                },
+                "preterite": {
+                    "yo": "tuve",
+                    "tú": "tuviste",
+                    "él/ella": "tuvo",
+                    "nosotros": "tuvimos",
+                    "vosotros": "tuvisteis",
+                    "ellos": "tuvieron"
+                }
+            }
+        },
+        {
+            "id": "vivir",
+            "spanish": "vivir",
+            "english": "to live",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "vivo",
+                    "tú": "vives",
+                    "él/ella": "vive",
+                    "nosotros": "vivimos",
+                    "vosotros": "vivís",
+                    "ellos": "viven"
+                },
+                "preterite": {
+                    "yo": "viví",
+                    "tú": "viviste",
+                    "él/ella": "vivió",
+                    "nosotros": "vivimos",
+                    "vosotros": "vivisteis",
+                    "ellos": "vivieron"
+                }
+            }
+        },
+        {
+            "id": "comer",
+            "spanish": "comer",
+            "english": "to eat",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "como",
+                    "tú": "comes",
+                    "él/ella": "come",
+                    "nosotros": "comemos",
+                    "vosotros": "coméis",
+                    "ellos": "comen"
+                },
+                "preterite": {
+                    "yo": "comí",
+                    "tú": "comiste",
+                    "él/ella": "comió",
+                    "nosotros": "comimos",
+                    "vosotros": "comisteis",
+                    "ellos": "comieron"
+                }
+            }
+        },
+        {
+            "id": "gustar",
+            "spanish": "gustar",
+            "english": "to like",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "me gusta",
+                    "tú": "te gusta",
+                    "él/ella": "le gusta",
+                    "nosotros": "nos gusta",
+                    "vosotros": "os gusta",
+                    "ellos": "les gusta"
+                },
+                "preterite": {
+                    "yo": "me gustó",
+                    "tú": "te gustó",
+                    "él/ella": "le gustó",
+                    "nosotros": "nos gustó",
+                    "vosotros": "os gustó",
+                    "ellos": "les gustó"
+                }
+            }
+        },
+        {
+            "id": "visitar",
+            "spanish": "visitar",
+            "english": "to visit",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "visito",
+                    "tú": "visitas",
+                    "él/ella": "visita",
+                    "nosotros": "visitamos",
+                    "vosotros": "visitáis",
+                    "ellos": "visitan"
+                },
+                "preterite": {
+                    "yo": "visité",
+                    "tú": "visitaste",
+                    "él/ella": "visitó",
+                    "nosotros": "visitamos",
+                    "vosotros": "visitasteis",
+                    "ellos": "visitaron"
+                }
+            }
+        },
+        {
+            "id": "cocinar",
+            "spanish": "cocinar",
+            "english": "to cook",
+            "type": "verb",
+            "conjugations": {
+                "present": {
+                    "yo": "cocino",
+                    "tú": "cocinas",
+                    "él/ella": "cocina",
+                    "nosotros": "cocinamos",
+                    "vosotros": "cocináis",
+                    "ellos": "cocinan"
+                },
+                "preterite": {
+                    "yo": "cociné",
+                    "tú": "cocinaste",
+                    "él/ella": "cocinó",
+                    "nosotros": "cocinamos",
+                    "vosotros": "cocinasteis",
+                    "ellos": "cocinaron"
+                }
+            }
+        }
+    ],
+    "phrases": [
+        {
+            "id": "p1",
+            "spanish": "Tengo una familia grande.",
+            "english": "I have a big family.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p2",
+            "spanish": "Mi madre vive en España.",
+            "english": "My mother lives in Spain.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p3",
+            "spanish": "Mi padre come en la cocina.",
+            "english": "My father eats in the kitchen.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p4",
+            "spanish": "Mi hermana y yo estudiamos juntos.",
+            "english": "My sister and I study together.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p5",
+            "spanish": "Mi hermano tiene un libro nuevo.",
+            "english": "My brother has a new book.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p6",
+            "spanish": "A mi amigo le gusta el español.",
+            "english": "My friend likes Spanish.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p7",
+            "spanish": "Mis amigos viven cerca de la escuela.",
+            "english": "My friends live near the school.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p8",
+            "spanish": "Tenemos clase el martes.",
+            "english": "We have class on Tuesday.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p9",
+            "spanish": "A mi amiga le gusta comer pizza.",
+            "english": "My (female) friend likes to eat pizza.",
+            "audioUrl": ""
+        },
+        {
+            "id": "p10",
+            "spanish": "Mi familia vive en una casa pequeña.",
+            "english": "My family lives in a small house.",
+            "audioUrl": ""
+        }
+    ]
+}

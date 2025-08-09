@@ -19,11 +19,18 @@ export function useMultiWeekSelection(config, initialWeekId) {
     })
 
     // Calculate unit selection states
+    // Note: flattened config.units currently have empty weeks arrays (weeks loaded only into courses.units)
+    // so derive weeks by filtering config.weeks when unit.weeks is empty
     config.units?.forEach(unit => {
-      const unitWeeks = unit.weeks || []
+      const unitWeeks = (unit.weeks && unit.weeks.length > 0)
+        ? unit.weeks
+        : (config.weeks?.filter(w => w.unitId === unit.id) || [])
       const selectedCount = unitWeeks.filter(week => selectedWeekIds.has(week.id)).length
-      
-      if (selectedCount === 0) {
+
+      if (unitWeeks.length === 0) {
+        // No weeks found for this unit (should not normally happen) => treat as none
+        states.units[unit.id] = 'none'
+      } else if (selectedCount === 0) {
         states.units[unit.id] = 'none'
       } else if (selectedCount === unitWeeks.length) {
         states.units[unit.id] = 'selected'
@@ -66,25 +73,29 @@ export function useMultiWeekSelection(config, initialWeekId) {
   }, [])
 
   const toggleUnitSelection = useCallback((unitId) => {
-    if (!config?.units) return
-    
-    const unit = config.units.find(u => u.id === unitId)
-    if (!unit?.weeks) return
+    if (!config) return
 
-    const unitWeekIds = unit.weeks.map(w => w.id)
+    // Gather week IDs for this unit. Prefer unit.weeks if present, else derive from global weeks list.
+    let unitWeekIds = []
+    const flatUnit = config.units?.find(u => u.id === unitId)
+    if (flatUnit?.weeks && flatUnit.weeks.length > 0) {
+      unitWeekIds = flatUnit.weeks.map(w => w.id)
+    } else if (config.weeks) {
+      unitWeekIds = config.weeks.filter(w => w.unitId === unitId).map(w => w.id)
+    }
+    if (unitWeekIds.length === 0) return
+
     const currentState = getSelectionStates.units[unitId]
 
     setSelectedWeekIds(prev => {
       const newSet = new Set(prev)
-      
+
       if (currentState === 'selected') {
-        // Deselect all weeks in this unit
         unitWeekIds.forEach(weekId => newSet.delete(weekId))
       } else {
-        // Select all weeks in this unit (partial or none -> selected)
         unitWeekIds.forEach(weekId => newSet.add(weekId))
       }
-      
+
       return newSet
     })
   }, [config, getSelectionStates])

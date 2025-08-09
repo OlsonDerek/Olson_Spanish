@@ -1,0 +1,45 @@
+{
+  "id": "",
+  "courseId": "",
+  "unitId": "",
+  "title": "",
+  "startDate": "YYYY-MM-DD",
+  "endDate": "YYYY-MM-DD",
+  "vocab": [
+    {
+      "id": "",
+      "spanish": "",
+      "english": "",
+      "type": "",
+      "conjugations": {
+        "present": {
+          "yo": "",
+          "tú": "",
+          "él/ella": "",
+          "nosotros": "",
+          "vosotros": "",
+          "ellos": ""
+        },
+        "preterite": {
+          "yo": "",
+          "tú": "",
+          "él/ella": "",
+          "nosotros": "",
+          "vosotros": "",
+          "ellos": ""
+        },
+        "imperfect": {
+          "yo": "",
+          "tú": "",
+          "él/ella": "",
+          "nosotros": "",
+          "vosotros": "",
+          "ellos": ""
+        }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "", "spanish": "", "english": "", "audioUrl": "" }
+  ]
+}

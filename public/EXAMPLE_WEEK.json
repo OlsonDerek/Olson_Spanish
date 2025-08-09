@@ -1,0 +1,28 @@
+{
+  "id": "2025-08-18",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 3: Family & Basics Review",
+  "startDate": "2025-08-18",
+  "endDate": "2025-08-24",
+  "vocab": [
+    { "id": "familia", "spanish": "familia", "english": "family", "type": "noun" },
+    { "id": "amigo", "spanish": "amigo", "english": "friend (male)", "type": "noun" },
+    { "id": "amiga", "spanish": "amiga", "english": "friend (female)", "type": "noun" },
+    {
+      "id": "tener",
+      "spanish": "tener",
+      "english": "to have",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "tengo", "tú": "tienes", "él/ella": "tiene", "nosotros": "tenemos", "vosotros": "tenéis", "ellos": "tienen" },
+        "preterite": { "yo": "tuve", "tú": "tuviste", "él/ella": "tuvo", "nosotros": "tuvimos", "vosotros": "tuvisteis", "ellos": "tuvieron" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Tengo una familia grande.", "english": "I have a big family.", "audioUrl": "" },
+    { "id": "p2", "spanish": "Mi amigo estudia español.", "english": "My friend studies Spanish.", "audioUrl": "" },
+    { "id": "p3", "spanish": "Tenemos clase el lunes.", "english": "We have class on Monday.", "audioUrl": "" }
+  ]
+}

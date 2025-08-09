@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'preact/hooks'
+// Vercel Web Analytics: use the React export; @preact/preset-vite provides react -> preact/compat alias
+import { Analytics } from '@vercel/analytics/react'
 import { Header } from './components/Header'
 import { SideNav } from './components/SideNav'
 import { WeekView } from './components/WeekView'
@@ -188,6 +190,7 @@ export function App() {
           }}
         />
       )}
+  {import.meta.env.PROD && <Analytics />}
     </div>
   )
 }
