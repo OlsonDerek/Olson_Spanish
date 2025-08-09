@@ -1,0 +1,192 @@
+.study-card-wrapper {
+	position: relative;
+}
+
+.study-card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 20px 80px 20px 24px;
+	cursor: pointer;
+	transition: background .15s ease;
+	min-height: 120px;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+}
+
+.vocab {
+    text-align: center;
+}
+
+.study-card:hover {
+	background: var(--surface-2);
+}
+
+.study-card:focus {
+	outline: 2px solid var(--primary-200);
+	outline-offset: 2px;
+}
+
+.card-content {
+	/* text-align: left; */
+	flex: 1;
+	padding-right: 12px;
+	overflow: visible;
+}
+
+.phrase {
+    text-align: left;
+}
+
+.card-content .word {
+	font-size: var(--text-body);
+	font-weight: var(--fw-semibold);
+	margin: 0 0 4px 0;
+	color: var(--text-strong);
+	margin-right: 8px;
+}
+
+.card-content .word-type {
+	font-size: var(--text-caption);
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	display: block;
+}
+
+.phrase-text {
+	font-size: var(--text-body);
+	line-height: 1.45;
+	color: var(--text);
+	padding-right: 6px;
+	white-space: normal;
+	word-break: break-word;
+}
+
+.right-buttons {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	transform: none;
+	flex-direction: column;
+	display: flex;
+	gap: 8px;
+}
+
+.play-button {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: 1px solid var(--primary);
+	background: var(--primary);
+	color: var(--text-inverse);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background .15s ease;
+}
+
+.play-button:hover:not(:disabled) {
+	background: var(--primary-600);
+}
+
+.play-button:focus {
+	outline: 2px solid var(--primary-200);
+	outline-offset: 2px;
+}
+
+.play-button.playing {
+	animation: pulse 1.5s ease-in-out infinite;
+}
+
+.review-button {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid var(--border);
+	background: #182230;
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	cursor: pointer;
+	transition: background .15s ease, color .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.review-button svg {
+	stroke-width: 3;
+}
+
+.review-button.active {
+	background: #12231a;
+	color: #22c55e;
+	border-color: #1e3a28;
+}
+
+.study-card.reviewed {
+	background: var(--surface);
+}
+
+.tense-title {
+	font-size: var(--text-caption);
+	font-weight: var(--fw-semibold);
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	margin-bottom: 4px;
+}
+
+.conjugation-grid {
+	margin-top: 10px;
+}
+
+.tense-group {
+	margin-bottom: 5px;
+}
+
+.tense-group:last-child {
+	margin-bottom: 0;
+}
+
+.conjugation-forms {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+	gap: 4px 12px;
+}
+
+.conjugation-item {
+	display: flex;
+	gap: 4px;
+	font-size: var(--text-caption);
+}
+
+.conjugation-item .person {
+	color: var(--text-muted);
+}
+
+.conjugation-item .form {
+	color: var(--text);
+	font-weight: var(--fw-semibold);
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1
+	}
+	50% {
+		opacity: .7
+	}
+}
+
+@media (max-width: 600px) {
+	.study-card {
+		padding: 16px 70px 16px 18px
+	}
+	.right-buttons {
+		top: 5px
+	}
+}

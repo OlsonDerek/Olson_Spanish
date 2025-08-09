@@ -1,0 +1,80 @@
+import { useState, useMemo } from 'preact/hooks'
+import { useAudio } from '../hooks/useAudio'
+import { highlightVocabInPhrase } from '../utils/phraseHighlighting'
+import './StudyCard.css'
+
+const STATES = {
+  SPANISH: 'spanish',
+  ENGLISH: 'english',
+  CONJUGATIONS: 'conjugations'
+}
+
+export function StudyCard({ type, item, isReviewed, onToggleReviewed, audioConfig, vocabList }) {
+  const [state, setState] = useState(STATES.SPANISH)
+  const { playPhrase, isPlaying } = useAudio(audioConfig)
+  const hasConjugations = type === 'vocab' && item.conjugations && Object.keys(item.conjugations).length > 0
+
+  const highlightedPhrase = useMemo(() => {
+    if (type !== 'phrase') return ''
+    return highlightVocabInPhrase(item.spanish, vocabList || [])
+  }, [type, item.spanish, vocabList])
+
+  const cycle = () => {
+    if (state === STATES.SPANISH) setState(STATES.ENGLISH)
+    else if (state === STATES.ENGLISH && hasConjugations) setState(STATES.CONJUGATIONS)
+    else setState(STATES.SPANISH)
+  }
+
+  const handlePlay = async (e) => {
+    e.stopPropagation()
+    try { await playPhrase(item.spanish, item.audioUrl) } catch(err) { console.warn(err) }
+  }
+  const handleReview = (e) => {
+    e.stopPropagation()
+    onToggleReviewed()
+  }
+
+  const renderContent = () => {
+    if (type === 'vocab') {
+      if (state === STATES.ENGLISH) {
+        return <div className="card-content english"><div className="word">{item.english}</div><div className="word-type">{item.type}</div></div>
+      }
+      if (state === STATES.CONJUGATIONS && hasConjugations) {
+        return <div className="card-content conjugations"><div className="word">{item.spanish}</div><div className="conjugation-grid">{Object.entries(item.conjugations).map(([tense, forms]) => (<div key={tense} className="tense-group"><div className="tense-title">{tense}</div><div className="conjugation-forms">{Object.entries(forms).map(([person, form]) => (<div key={person} className="conjugation-item"><span className="person">{person}:</span><span className="form">{form}</span></div>))}</div></div>))}</div></div>
+      }
+      return <div className="card-content spanish"><div className="word">{item.spanish}</div><div className="word-type">{item.type}</div></div>
+    }
+    // phrase
+    if (state === STATES.ENGLISH) {
+      return <div className="card-content english"><div className="phrase-text">{item.english}</div></div>
+    }
+    return <div className="card-content spanish"><div className="phrase-text" dangerouslySetInnerHTML={{ __html: highlightedPhrase }} /></div>
+  }
+
+  return (
+    <div className="study-card-wrapper">
+      <div
+        className={`study-card ${type} ${state} ${isReviewed ? 'reviewed' : ''}`}
+        onClick={cycle}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();cycle()}}}
+        aria-label={`${type === 'vocab' ? 'Vocabulary' : 'Phrase'} card ${item.spanish}`}
+      >
+        {renderContent()}
+        <div className="right-buttons">
+          <button className={`play-button ${isPlaying ? 'playing': ''}`} disabled={isPlaying} onClick={handlePlay} aria-label="Play audio">
+            {isPlaying ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            )}
+          </button>
+          <button className={`review-button ${isReviewed? 'active':''}`} onClick={handleReview} aria-pressed={isReviewed} aria-label={isReviewed? 'Unmark reviewed':'Mark reviewed'}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20,6 9,17 4,12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}

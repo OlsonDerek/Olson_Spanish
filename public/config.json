@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "Spanish Weekly",
+    "current_week_id": "2025-08-04",
+    "current_unit_id": "unit-1-basics",
+    "current_course_id": "spanish-1",
+    "audio": {
+      "tts": { "enabled": true, "voiceHint": "es-ES" },
+      "preferMp3": false
+    }
+  },
+  "courses": [
+    {
+      "id": "spanish-1",
+      "title": "Spanish 1: Foundations", 
+      "description": "Introduction to Spanish language fundamentals",
+      "units": [
+        {
+          "id": "unit-1-basics",
+          "title": "Unit 1: Basic Communication",
+          "description": "Greetings, introductions, and essential verbs",
+          "weeks": [
+    {
+      "id": "2025-08-04",
+      "title": "Week 1: Saludos",
+      "dateRange": "Aug 4–10, 2025",
+      "vocab": [
+        {
+          "id": "hola",
+          "spanish": "hola",
+          "english": "hello",
+          "type": "interjection"
+        },
+        {
+          "id": "adios",
+          "spanish": "adiós",
+          "english": "goodbye",
+          "type": "interjection"
+        },
+        {
+          "id": "ser",
+          "spanish": "ser",
+          "english": "to be (essential)",
+          "type": "verb",
+          "conjugations": {
+            "present": {
+              "yo": "soy",
+              "tú": "eres", 
+              "él/ella": "es",
+              "nosotros": "somos",
+              "vosotros": "sois",
+              "ellos": "son"
+            },
+            "preterite": {
+              "yo": "fui",
+              "tú": "fuiste",
+              "él/ella": "fue",
+              "nosotros": "fuimos",
+              "vosotros": "fuisteis", 
+              "ellos": "fueron"
+            }
+          }
+        },
+        {
+          "id": "estar",
+          "spanish": "estar",
+          "english": "to be (temporary)",
+          "type": "verb",
+          "conjugations": {
+            "present": {
+              "yo": "estoy",
+              "tú": "estás",
+              "él/ella": "está", 
+              "nosotros": "estamos",
+              "vosotros": "estáis",
+              "ellos": "están"
+            }
+          }
+        }
+      ],
+      "phrases": [
+        {
+          "id": "p1",
+          "spanish": "Hola, ¿cómo estás?",
+          "english": "Hi, how are you?",
+          "audioUrl": ""
+        },
+        {
+          "id": "p2", 
+          "spanish": "Yo soy estudiante.",
+          "english": "I am a student.",
+          "audioUrl": ""
+        },
+        {
+          "id": "p3",
+          "spanish": "Adiós, hasta mañana.",
+          "english": "Goodbye, see you tomorrow.",
+          "audioUrl": ""
+        }
+      ]
+            },
+            {
+              "id": "2025-08-11",
+              "title": "Week 2: En la Escuela", 
+              "dateRange": "Aug 11–17, 2025",
+              "vocab": [
+                {
+                  "id": "lapiz",
+                  "spanish": "lápiz",
+                  "english": "pencil",
+                  "type": "noun"
+                },
+                {
+                  "id": "libro",
+                  "spanish": "libro", 
+                  "english": "book",
+                  "type": "noun"
+                },
+                {
+                  "id": "estudiar",
+                  "spanish": "estudiar",
+                  "english": "to study",
+                  "type": "verb",
+                  "conjugations": {
+                    "present": {
+                      "yo": "estudio",
+                      "tú": "estudias",
+                      "él/ella": "estudia",
+                      "nosotros": "estudiamos",
+                      "vosotros": "estudiáis",
+                      "ellos": "estudian"
+                    }
+                  }
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "p1",
+                  "spanish": "Necesito un lápiz.",
+                  "english": "I need a pencil.",
+                  "audioUrl": ""
+                },
+                {
+                  "id": "p2",
+                  "spanish": "Yo estudio español cada día.",
+                  "english": "I study Spanish every day.", 
+                  "audioUrl": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

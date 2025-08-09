@@ -1,0 +1,259 @@
+.vocab-card-wrapper {
+  position: relative;
+}
+
+.vocab-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.vocab-card:hover {
+  background: var(--surface-2);
+}
+
+.vocab-card:focus {
+  outline: 2px solid var(--primary-200);
+  outline-offset: 2px;
+}
+
+.vocab-card.reviewed {
+  background: var(--surface);
+}
+
+/* Card content */
+.card-content {
+  text-align: left;
+}
+
+.card-content .word {
+  font-size: var(--text-body);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 4px;
+  color: var(--text-strong);
+}
+
+.card-content .word-type {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Conjugations specific styles */
+.conjugation-grid {
+  margin-top: 12px;
+}
+
+.tense-group {
+  margin-bottom: 12px;
+}
+
+.tense-title {
+  font-size: var(--text-caption);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.conjugation-forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 4px 12px;
+}
+
+.conjugation-item {
+  display: flex;
+  gap: 4px;
+  font-size: var(--text-caption);
+}
+
+.conjugation-item .person {
+  color: var(--text-muted);
+}
+
+.conjugation-item .form {
+  color: var(--text);
+  font-weight: var(--fw-semibold);
+}
+
+/* Right buttons */
+.right-buttons {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.play-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.play-button:hover:not(:disabled) {
+  background: var(--primary-600);
+}
+
+.play-button:focus {
+  outline: 2px solid var(--primary-200);
+  outline-offset: 2px;
+}
+
+.play-button.playing {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.review-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #182230; /* neutral surface */
+  color: var(--text-muted); /* neutral icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.review-button svg {
+  stroke-width: 3;
+}
+
+/* .review-button:hover {
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border-color: #1e3a28;
+}
+
+.review-button:focus {
+  outline: 2px solid var(--primary-200);
+  outline-offset: 2px;
+} */
+
+.review-button.active {
+  background: #12231a;
+  color: #22c55e;
+  border-color: #1e3a28;
+}
+
+/* Week context badge */
+.week-context {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.week-badge {
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .vocab-card {
+    padding: 14px 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vocab-card {
+    background-color: var(--gray-800);
+    border-color: var(--gray-700);
+  }
+  
+  .vocab-card:hover {
+    border-color: var(--primary);
+    background-color: var(--gray-700);
+  }
+  
+  .vocab-card.spanish {
+    background: var(--gray-800);
+    border-color: var(--primary);
+  }
+  
+  .vocab-card.english {
+    background: var(--gray-800);
+    border-color: var(--accent);
+  }
+  
+  .vocab-card.conjugations {
+    background: var(--gray-800);
+    border-color: var(--success);
+  }
+  
+  .card-content .word {
+    color: var(--gray-200);
+  }
+  
+  .card-content .word-type {
+    color: var(--gray-400);
+  }
+  
+  .tense-title {
+    color: var(--gray-300);
+    border-bottom-color: var(--gray-600);
+  }
+  
+  .conjugation-item .person {
+    color: var(--gray-400);
+  }
+  
+  .conjugation-item .form {
+    color: var(--gray-200);
+  }
+  
+  .tap-hint {
+    background-color: var(--gray-700);
+  }
+  
+  .review-button {
+    border-color: var(--gray-600);
+    background-color: var(--gray-800);
+    color: var(--gray-400);
+  }
+  
+  .review-button:hover {
+    border-color: var(--success);
+    background-color: var(--gray-700);
+    color: var(--success);
+  }
+}

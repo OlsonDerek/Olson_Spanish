@@ -1,0 +1,77 @@
+.selection-bubble {
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.selection-bubble:hover:not(.disabled) {
+  border-color: var(--primary);
+  background-color: var(--surface-2);
+  color: var(--text);
+}
+
+.selection-bubble:focus {
+  outline: 2px solid var(--primary-200);
+  outline-offset: 2px;
+}
+
+.selection-bubble.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* States */
+.selection-bubble.selected {
+  border-color: var(--success);
+  background-color: var(--success);
+  color: var(--text-inverse);
+}
+
+.selection-bubble.selected:hover:not(.disabled) {
+  background-color: var(--success);
+}
+
+.selection-bubble.partial {
+  border-color: var(--warning);
+  background-color: var(--warning);
+  color: var(--text-inverse);
+}
+
+.selection-bubble.partial:hover:not(.disabled) {
+  background-color: var(--warning);
+}
+
+.selection-bubble.none {
+  border-color: var(--border);
+  background-color: var(--surface);
+  color: var(--text-muted);
+}
+
+.selection-bubble.none:hover:not(.disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Sizes */
+.selection-bubble.small {
+  width: 24px;
+  height: 24px;
+}
+
+.selection-bubble.medium {
+  width: 28px;
+  height: 28px;
+}
+
+.selection-bubble.large {
+  width: 32px;
+  height: 32px;
+}
+

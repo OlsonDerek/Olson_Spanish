@@ -1,0 +1,78 @@
+{
+  "app": {
+    "title": "",
+    "current_week_id": "",
+    "current_unit_id": "",
+    "current_course_id": "",
+    "audio": {
+      "tts": { 
+        "enabled": true, 
+        "voiceHint": "es-ES" 
+      },
+      "preferMp3": false
+    }
+  },
+  "courses": [
+    {
+      "id": "",
+      "title": "",
+      "description": "",
+      "units": [
+        {
+          "id": "",
+          "title": "",
+          "description": "",
+          "weeks": [
+            {
+              "id": "",
+              "title": "",
+              "dateRange": "",
+              "vocab": [
+                {
+                  "id": "",
+                  "spanish": "",
+                  "english": "",
+                  "type": "",
+                  "conjugations": {
+                    "present": {
+                      "yo": "",
+                      "tú": "",
+                      "él/ella": "",
+                      "nosotros": "",
+                      "vosotros": "",
+                      "ellos": ""
+                    },
+                    "preterite": {
+                      "yo": "",
+                      "tú": "",
+                      "él/ella": "",
+                      "nosotros": "",
+                      "vosotros": "",
+                      "ellos": ""
+                    },
+                    "imperfect": {
+                      "yo": "",
+                      "tú": "",
+                      "él/ella": "",
+                      "nosotros": "",
+                      "vosotros": "",
+                      "ellos": ""
+                    }
+                  }
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "",
+                  "spanish": "",
+                  "english": "",
+                  "audioUrl": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

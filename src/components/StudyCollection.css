@@ -1,0 +1,1 @@
+.study-collection{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:4px}.study-collection.phrase{grid-template-columns:1fr}.study-collection .empty-state{grid-column:1/-1;text-align:center;color:var(--text-muted);padding:32px}

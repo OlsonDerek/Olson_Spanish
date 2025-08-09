@@ -1,0 +1,252 @@
+{
+  "app": {
+    "title": "Spanish Weekly",
+    "current_week_id": "2025-08-04",
+    "current_unit_id": "unit-1-basics",
+    "current_course_id": "spanish-1",
+    "audio": {
+      "tts": { 
+        "enabled": true, 
+        "voiceHint": "es-ES" 
+      },
+      "preferMp3": false
+    }
+  },
+  "courses": [
+    {
+      "id": "spanish-1",
+      "title": "Spanish 1: Foundations",
+      "description": "Introduction to Spanish language fundamentals",
+      "units": [
+        {
+          "id": "unit-1-basics",
+          "title": "Unit 1: Basic Communication",
+          "description": "Greetings, introductions, and essential verbs",
+          "weeks": [
+            {
+              "id": "2025-08-04",
+              "title": "Week 1: Saludos y Presentaciones",
+              "dateRange": "Aug 4–10, 2025",
+              "vocab": [
+                {
+                  "id": "hola",
+                  "spanish": "hola",
+                  "english": "hello",
+                  "type": "interjection"
+                },
+                {
+                  "id": "adios",
+                  "spanish": "adiós",
+                  "english": "goodbye",
+                  "type": "interjection"
+                },
+                {
+                  "id": "ser",
+                  "spanish": "ser",
+                  "english": "to be (essential)",
+                  "type": "verb",
+                  "conjugations": {
+                    "present": {
+                      "yo": "soy",
+                      "tú": "eres", 
+                      "él/ella": "es",
+                      "nosotros": "somos",
+                      "vosotros": "sois",
+                      "ellos": "son"
+                    },
+                    "preterite": {
+                      "yo": "fui",
+                      "tú": "fuiste",
+                      "él/ella": "fue",
+                      "nosotros": "fuimos",
+                      "vosotros": "fuisteis", 
+                      "ellos": "fueron"
+                    }
+                  }
+                },
+                {
+                  "id": "estar",
+                  "spanish": "estar",
+                  "english": "to be (temporary)",
+                  "type": "verb",
+                  "conjugations": {
+                    "present": {
+                      "yo": "estoy",
+                      "tú": "estás",
+                      "él/ella": "está", 
+                      "nosotros": "estamos",
+                      "vosotros": "estáis",
+                      "ellos": "están"
+                    }
+                  }
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "p1",
+                  "spanish": "Hola, ¿cómo estás?",
+                  "english": "Hi, how are you?",
+                  "audioUrl": ""
+                },
+                {
+                  "id": "p2", 
+                  "spanish": "Yo soy estudiante.",
+                  "english": "I am a student.",
+                  "audioUrl": ""
+                },
+                {
+                  "id": "p3",
+                  "spanish": "Adiós, hasta mañana.",
+                  "english": "Goodbye, see you tomorrow.",
+                  "audioUrl": ""
+                }
+              ]
+            },
+            {
+              "id": "2025-08-11",
+              "title": "Week 2: Números y Colores", 
+              "dateRange": "Aug 11–17, 2025",
+              "vocab": [
+                {
+                  "id": "uno",
+                  "spanish": "uno",
+                  "english": "one",
+                  "type": "number"
+                },
+                {
+                  "id": "rojo",
+                  "spanish": "rojo", 
+                  "english": "red",
+                  "type": "adjective"
+                },
+                {
+                  "id": "azul",
+                  "spanish": "azul",
+                  "english": "blue",
+                  "type": "adjective"
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "p1",
+                  "spanish": "Mi color favorito es azul.",
+                  "english": "My favorite color is blue.",
+                  "audioUrl": ""
+                },
+                {
+                  "id": "p2",
+                  "spanish": "Tengo uno, dos, tres libros.",
+                  "english": "I have one, two, three books.", 
+                  "audioUrl": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "unit-2-school",
+          "title": "Unit 2: School Life",
+          "description": "Vocabulary and phrases for academic settings",
+          "weeks": [
+            {
+              "id": "2025-08-18",
+              "title": "Week 3: En la Escuela",
+              "dateRange": "Aug 18–24, 2025",
+              "vocab": [
+                {
+                  "id": "lapiz",
+                  "spanish": "lápiz",
+                  "english": "pencil",
+                  "type": "noun"
+                },
+                {
+                  "id": "libro",
+                  "spanish": "libro", 
+                  "english": "book",
+                  "type": "noun"
+                },
+                {
+                  "id": "estudiar",
+                  "spanish": "estudiar",
+                  "english": "to study",
+                  "type": "verb",
+                  "conjugations": {
+                    "present": {
+                      "yo": "estudio",
+                      "tú": "estudias",
+                      "él/ella": "estudia",
+                      "nosotros": "estudiamos",
+                      "vosotros": "estudiáis",
+                      "ellos": "estudian"
+                    }
+                  }
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "p1",
+                  "spanish": "Necesito un lápiz para escribir.",
+                  "english": "I need a pencil to write.",
+                  "audioUrl": ""
+                },
+                {
+                  "id": "p2",
+                  "spanish": "Yo estudio español cada día.",
+                  "english": "I study Spanish every day.", 
+                  "audioUrl": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spanish-2",
+      "title": "Spanish 2: Intermediate Skills",
+      "description": "Building on fundamentals with more complex grammar and vocabulary",
+      "units": [
+        {
+          "id": "unit-3-family",
+          "title": "Unit 3: Family & Relationships",
+          "description": "Vocabulary for describing family members and relationships",
+          "weeks": [
+            {
+              "id": "2025-09-01",
+              "title": "Week 4: La Familia",
+              "dateRange": "Sep 1–7, 2025",
+              "vocab": [
+                {
+                  "id": "madre",
+                  "spanish": "madre",
+                  "english": "mother",
+                  "type": "noun"
+                },
+                {
+                  "id": "padre",
+                  "spanish": "padre",
+                  "english": "father",
+                  "type": "noun"
+                },
+                {
+                  "id": "hermano",
+                  "spanish": "hermano",
+                  "english": "brother",
+                  "type": "noun"
+                }
+              ],
+              "phrases": [
+                {
+                  "id": "p1",
+                  "spanish": "Mi madre es muy amable.",
+                  "english": "My mother is very kind.",
+                  "audioUrl": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
