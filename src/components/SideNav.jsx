@@ -15,7 +15,8 @@ export function SideNav({
   onWeekToggle,
   onUnitToggle,
   onCourseToggle,
-  onClose 
+  onClose,
+  onVoiceToggle
 }) {
   const [expandedCourses, setExpandedCourses] = useState(new Set([currentCourseId]))
   const [expandedUnits, setExpandedUnits] = useState(new Set([currentUnitId]))
@@ -177,6 +178,17 @@ export function SideNav({
             </div>
           )
         })}
+      </div>
+      <div className="side-nav-footer">
+        <button className="voice-select-footer" onClick={onVoiceToggle}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style="margin-right:6px">
+            <path d="M12 3v18" />
+            <path d="M17 8v8" />
+            <path d="M7 8v8" />
+            <path d="M4 12h16" />
+          </svg>
+          Select Voice
+        </button>
       </div>
     </nav>
   )

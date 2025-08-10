@@ -25,19 +25,44 @@ export function useAudio(audioConfig) {
 
       const utterance = new SpeechSynthesisUtterance(text)
       
-      // Try to find a Spanish voice
-      const voices = window.speechSynthesis.getVoices()
-      const spanishVoice = voices.find(voice => 
-        voice.lang.startsWith('es') || 
-        voice.lang.includes(voiceHint) ||
-        voice.name.toLowerCase().includes('spanish')
-      )
-      
-      if (spanishVoice) {
-        utterance.voice = spanishVoice
+      const preferredName = localStorage.getItem('prefs.tts.voice')
+      const preferredLang = localStorage.getItem('prefs.tts.voiceLang') || voiceHint
+
+      const pickVoice = () => {
+        const voices = window.speechSynthesis.getVoices() || []
+        let selected = null
+        if (preferredName) {
+          selected = voices.find(v => v.name === preferredName)
+        }
+        if (!selected) {
+          selected = voices.find(v => v.lang === preferredLang)
+        }
+        if (!selected) {
+          selected = voices.find(v => v.lang.startsWith('es'))
+        }
+        if (!selected) {
+          selected = voices.find(v => v.name.toLowerCase().includes('spanish'))
+        }
+        if (selected) {
+          utterance.voice = selected
+          utterance.lang = selected.lang
+        } else {
+          utterance.lang = preferredLang
+        }
       }
-      
-      utterance.lang = voiceHint
+
+      // Some browsers need async resolution of voices
+      if (window.speechSynthesis.getVoices().length === 0) {
+        const handler = () => {
+          pickVoice()
+          window.speechSynthesis.removeEventListener('voiceschanged', handler)
+          window.speechSynthesis.speak(utterance)
+        }
+        window.speechSynthesis.addEventListener('voiceschanged', handler)
+      } else {
+        pickVoice()
+      }
+
       utterance.rate = 0.8 // Slightly slower for learning
       utterance.pitch = 1.1
       utterance.volume = 1.0
@@ -57,7 +82,10 @@ export function useAudio(audioConfig) {
         reject(new Error(`Speech synthesis error: ${event.error}`))
       }
 
-      window.speechSynthesis.speak(utterance)
+      // Only speak immediately if voices already loaded
+      if (window.speechSynthesis.getVoices().length > 0) {
+        window.speechSynthesis.speak(utterance)
+      }
     })
   }, [])
 

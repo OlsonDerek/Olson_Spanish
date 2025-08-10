@@ -62,6 +62,11 @@
   padding: 4px 0;
 }
 
+.side-nav-footer { border-top:1px solid var(--border); padding:8px; background: var(--bg); }
+.voice-select-footer { width:100%; display:flex; align-items:center; justify-content:center; background: var(--primary-600); color:#fff; border:none; border-radius:8px; padding:10px 12px; font-size:0.85rem; font-weight:600; cursor:pointer; }
+.voice-select-footer:hover { background: var(--primary-500); }
+.voice-select-footer:focus { outline:2px solid var(--primary-200); outline-offset:2px; }
+
 .nav-item {
   display: flex;
   align-items: center;

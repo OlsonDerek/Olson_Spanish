@@ -20,7 +20,8 @@
 }
 
 .nav-toggle,
-.calendar-toggle {
+.calendar-toggle,
+.voice-toggle {
   width: 44px;
   height: 44px;
   border: none;
@@ -31,16 +32,20 @@
 }
 
 .nav-toggle:hover,
-.calendar-toggle:hover {
+.calendar-toggle:hover,
+.voice-toggle:hover {
   background: var(--surface-2);
   color: var(--text-strong);
 }
 
 .nav-toggle:focus,
-.calendar-toggle:focus {
+.calendar-toggle:focus,
+.voice-toggle:focus {
   outline: 2px solid var(--primary-200);
   outline-offset: 2px;
 }
+
+.header-actions { display:flex; align-items:center; gap:4px; }
 
 .title-section {
   flex: 1;

@@ -8,6 +8,7 @@ import { CalendarNav } from './components/CalendarNav'
 import { ProgressBar } from './components/ProgressBar'
 import { FullNavView } from './components/FullNavView'
 import { useConfig } from './hooks/useConfig'
+import { VoiceSelector } from './components/VoiceSelector'
 import { useSession } from './hooks/useSession'
 import { useMultiWeekSelection } from './hooks/useMultiWeekSelection'
 import './app.css'
@@ -15,6 +16,7 @@ import './app.css'
 export function App() {
   const [sideNavOpen, setSideNavOpen] = useState(false)
   const [calendarOpen, setCalendarOpen] = useState(false)
+  const [voiceOpen, setVoiceOpen] = useState(false)
   const [currentWeekId, setCurrentWeekId] = useState(null)
   const [viewMode, setViewMode] = useState('week') // 'week', 'unit', 'course'
   const [currentUnitId, setCurrentUnitId] = useState(null)
@@ -118,6 +120,7 @@ export function App() {
         currentCourse={currentCourse}
         onSideNavToggle={() => setSideNavOpen(!sideNavOpen)}
         onCalendarToggle={() => setCalendarOpen(!calendarOpen)}
+  onVoiceToggle={() => setVoiceOpen(true)}
       />
 
       <SideNav
@@ -134,6 +137,7 @@ export function App() {
         onUnitToggle={toggleUnitSelection}
         onCourseToggle={toggleCourseSelection}
         onClose={() => setSideNavOpen(false)}
+  onVoiceToggle={() => { setSideNavOpen(false); setVoiceOpen(true) }}
       />
 
       <CalendarNav
@@ -190,6 +194,7 @@ export function App() {
           }}
         />
       )}
+  <VoiceSelector isOpen={voiceOpen} onClose={() => setVoiceOpen(false)} />
   {import.meta.env.PROD && <Analytics />}
     </div>
   )
