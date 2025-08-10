@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'preact/hooks'
+import { useEffect, useState, useCallback, useRef } from 'preact/hooks'
 import './VoiceSelector.css'
 
 // Utility to load voices reliably across browsers (esp. iOS where getVoices may be empty initially)
@@ -33,15 +33,22 @@ export function VoiceSelector({ isOpen, onClose, onSelect }) {
   const [filter, setFilter] = useState('')
   const [loading, setLoading] = useState(false)
   const [preferred, setPreferred] = useState(localStorage.getItem('prefs.tts.voice') || '')
+  const previewingRef = useRef(false)
 
   const refresh = useCallback(async () => {
     setLoading(true)
     const voices = await loadVoices()
     // Only Spanish voices (any dialect) + maybe top Google/Microsoft with es in lang
     const esVoices = voices.filter(v => /(^|-)es(-|$)/i.test(v.lang) || v.lang.toLowerCase().startsWith('es'))
-    // Sort: language code, then name
-    esVoices.sort((a,b) => (a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name)))
-    setAllVoices(esVoices)
+    // Dedupe (iOS sometimes repeats voices on event firing)
+    const seen = new Set()
+    const unique = []
+    for (const v of esVoices) {
+      const key = v.name + '|' + v.lang
+      if (!seen.has(key)) { seen.add(key); unique.push(v) }
+    }
+    unique.sort((a,b) => (a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name)))
+    setAllVoices(unique)
     setLoading(false)
   }, [])
 
@@ -53,6 +60,28 @@ export function VoiceSelector({ isOpen, onClose, onSelect }) {
     localStorage.setItem('prefs.tts.voiceLang', voice.lang)
     onSelect?.(voice)
     onClose?.()
+  }
+
+  const previewVoice = (voice) => {
+    if (!window.speechSynthesis) return
+    try {
+      window.speechSynthesis.cancel()
+    } catch {}
+    const hour = new Date().getHours()
+    let dayPart
+    if (hour < 12) dayPart = 'Buenos días'
+    else if (hour < 18) dayPart = 'Buenas tardes'
+    else dayPart = 'Buenas noches'
+    const sample = `Hola, ${dayPart}`
+    const utter = new SpeechSynthesisUtterance(sample)
+    utter.voice = voice
+    utter.lang = voice.lang
+    utter.rate = 0.9
+    utter.pitch = 1.0
+    previewingRef.current = true
+    utter.onend = () => { previewingRef.current = false }
+    utter.onerror = () => { previewingRef.current = false }
+    window.speechSynthesis.speak(utter)
   }
 
   if (!isOpen) return null
@@ -82,17 +111,34 @@ export function VoiceSelector({ isOpen, onClose, onSelect }) {
           {visible.map(v => {
             const isPreferred = preferred === v.name
             return (
-              <button
+              <div
                 key={v.name + v.lang}
                 className={`voice-item ${isPreferred ? 'selected' : ''}`}
+                role="button"
+                tabIndex={0}
                 onClick={() => handleSelect(v)}
+                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelect(v) } }}
               >
-                <div className="voice-main">
-                  <span className="voice-name">{v.name}</span>
-                  {isPreferred && <span className="badge">Default</span>}
+                <div className="voice-left">
+                  <div className="voice-main">
+                    <span className="voice-name">{v.name}</span>
+                    {isPreferred && <span className="badge">Default</span>}
+                  </div>
+                  <div className="voice-meta">{v.lang}</div>
                 </div>
-                <div className="voice-meta">{v.lang}</div>
-              </button>
+                <div className="voice-actions">
+                  <button
+                    type="button"
+                    className="preview-btn"
+                    aria-label={`Preview ${v.name}`}
+                    onClick={(e) => { e.stopPropagation(); previewVoice(v) }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             )
           })}
           {!visible.length && (

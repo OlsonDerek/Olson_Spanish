@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .claude
+dist
+#ignore dist and it's files
+dist/*
