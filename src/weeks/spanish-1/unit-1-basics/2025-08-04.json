@@ -26,11 +26,21 @@
       "conjugations": {
         "present": { "yo": "estoy", "tú": "estás", "él/ella": "está", "nosotros": "estamos", "vosotros": "estáis", "ellos": "están" }
       }
-    }
+    },
+    { "id": "usted", "spanish": "usted", "english": "you (formal)", "type": "pronoun" },
+    { "id": "tu", "spanish": "tú", "english": "you (informal)", "type": "pronoun" },
+    { "id": "yo", "spanish": "yo", "english": "I", "type": "pronoun" },
+    { "id": "el_ella", "spanish": "él/ella", "english": "he/she", "type": "pronoun" },
+    { "id": "como", "spanish": "cómo", "english": "how", "type": "interrogative" },
+    { "id": "manana", "spanish": "mañana", "english": "morning / tomorrow", "type": "noun" },
+    { "id": "hasta", "spanish": "hasta", "english": "until", "type": "preposition" }
   ],
   "phrases": [
-    { "id": "p1", "spanish": "Hola, ¿cómo estás?", "english": "Hi, how are you?", "audioUrl": "" },
-    { "id": "p2", "spanish": "Yo soy estudiante.", "english": "I am a student.", "audioUrl": "" },
-    { "id": "p3", "spanish": "Adiós, hasta mañana.", "english": "Goodbye, see you tomorrow.", "audioUrl": "" }
+    { "id": "p1", "spanish": "Hola, ¿cómo estás tú?", "english": "Hi, how are you? (informal)", "audioUrl": "" },
+    { "id": "p2", "spanish": "Hola, ¿cómo está usted?", "english": "Hello, how are you? (formal)", "audioUrl": "" },
+    { "id": "p3", "spanish": "Yo soy estudiante.", "english": "I am a student.", "audioUrl": "" },
+    { "id": "p4", "spanish": "Él es mi amigo.", "english": "He is my friend.", "audioUrl": "" },
+    { "id": "p5", "spanish": "El es mi profesor.", "english": "He is my teacher.", "audioUrl": "" },
+    { "id": "p6", "spanish": "Adiós, hasta mañana.", "english": "Goodbye, see you tomorrow.", "audioUrl": "" }
   ]
 }
