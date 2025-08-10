@@ -39,8 +39,49 @@
   transition: width .3s ease;
 }
 
-.hero-actions {
-  margin-top: var(--space-1);
+
+/* Study session bar */
+.session-bar {
+  display: flex;
+  align-items: center;  
+  margin-top: 10px;
+}
+.session-bar.multi { flex-wrap: wrap; }
+.session-left {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  flex: 1 1 auto;
+  min-width: 160px;
+}
+.session-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.session-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.start-btn { background:#065f46; border-color:#065f46; color:#fff; }
+.start-btn:hover { background:#047857; border-color:#047857; }
+.start-btn:disabled { opacity:.4; cursor:not-allowed; }
+.stop-btn { background:#7f1d1d; border-color:#7f1d1d; color:#fff; }
+.stop-btn:hover { background:#991b1b; border-color:#991b1b; }
+.reset-btn { font-size: .65rem; text-transform: uppercase; letter-spacing:.5px; padding: 6px 10px; }
+.session-timer {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .5px;
+  font-size: 0.85rem;
+  background: var(--surface-2);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  min-width: 82px; /* width for 00:00:00 */
+  text-align: center;
 }
 
 .hero-cta {
@@ -56,13 +97,27 @@
 .selection-chips {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-1);
+  flex: 0 0 auto;
   padding: var(--space-1) var(--space-2);
   background: var(--surface-2);
   border-radius: var(--radius);
   margin-bottom: var(--space-2);
 }
+
+.session-bar.compact { gap: 10px; }
+.session-bar.compact .session-right button { margin-right: 0; }
+
+/* Center timer variant: left spacer grows, timer centered via absolute technique on available width */
+.session-bar.center-timer {
+  position: relative;
+}
+.session-bar.center-timer .session-left { flex:1 1 0; }
+.session-bar.center-timer .session-timer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.session-bar.center-timer .session-right { margin-left:auto; }
 
 .chips-label {
   font-size: var(--text-caption);

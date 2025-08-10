@@ -9,7 +9,9 @@ import { ProgressBar } from './components/ProgressBar'
 import { FullNavView } from './components/FullNavView'
 import { useConfig } from './hooks/useConfig'
 import { VoiceSelector } from './components/VoiceSelector'
-import { useSession } from './hooks/useSession'
+// Legacy per-week session removed in favor of explicit study session
+// import { useSession } from './hooks/useSession'
+import { useStudySession } from './hooks/useStudySession'
 import { useMultiWeekSelection } from './hooks/useMultiWeekSelection'
 import './app.css'
 import { track } from './utils/analytics.js'
@@ -24,7 +26,7 @@ export function App() {
   const [currentCourseId, setCurrentCourseId] = useState(null)
   
   const { config, loading, error } = useConfig()
-  const { session, markReviewed, resetSession } = useSession(currentWeekId)
+  const studySession = useStudySession(config)
   const {
     selectedWeekIds,
     selectionStates,
@@ -167,8 +169,7 @@ export function App() {
             currentWeek={currentWeek}
             currentUnit={currentUnit}
             currentCourse={currentCourse}
-            session={session}
-            onMarkReviewed={markReviewed}
+            studySession={studySession}
             audioConfig={config.app.audio}
             onClearSelection={clearSelectedWeeks}
           />
@@ -189,12 +190,7 @@ export function App() {
         )}
       </main>
 
-      <ProgressBar
-        weeks={selectedWeeks}
-        currentWeekId={currentWeekId}
-        session={session}
-        onReset={resetSession}
-      />
+  <ProgressBar weeks={selectedWeeks} studySession={studySession} />
 
       {(sideNavOpen || calendarOpen) && (
         <div 

@@ -3,14 +3,13 @@ import { track } from '../utils/analytics.js'
 import { StudyCollection } from './StudyCollection'
 import './WeekView.css'
 
-export function WeekView({ 
-  weeks, 
-  viewMode, 
-  currentWeek, 
-  currentUnit, 
+export function WeekView({
+  weeks,
+  viewMode,
+  currentWeek,
+  currentUnit,
   currentCourse,
-  session, 
-  onMarkReviewed, 
+  studySession,
   audioConfig,
   onClearSelection
 }) {
@@ -64,8 +63,8 @@ export function WeekView({
   const singleWeek = weeks.length === 1 ? weeks[0] : null
 
   const counts = {
-    vocabReviewed: session.vocabReviewed?.length || 0,
-    phraseReviewed: session.phraseReviewed?.length || 0,
+    vocabReviewed: Object.values(studySession.reviewed.vocab).reduce((a, set) => a + set.size, 0),
+    phraseReviewed: Object.values(studySession.reviewed.phrase).reduce((a, set) => a + set.size, 0),
     vocabTotal: combinedContent.vocab.length,
     phraseTotal: combinedContent.phrases.length
   }
@@ -82,7 +81,18 @@ export function WeekView({
             </div>
           </div>
           <div className="hero-actions">
-            <button className="primary hero-cta">Study {singleWeek.title}</button>
+            <div className="session-bar compact">
+              <div className="session-timer" aria-label="Elapsed study time">{studySession.formatElapsed()}</div>
+              <div className="session-right">
+                {!studySession.active && (
+                  <button className="secondary start-btn" disabled={!singleWeek} onClick={() => singleWeek && studySession.start([singleWeek.id])}>Start</button>
+                )}
+                {studySession.active && (
+                  <button className="secondary stop-btn" onClick={() => studySession.stop()}>Stop</button>
+                )}
+                <button className="ghost reset-btn" onClick={() => studySession.reset()} aria-label="Reset session">Reset</button>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
@@ -94,6 +104,23 @@ export function WeekView({
             ))}
           </div>
           <button className="clear-chips" onClick={onClearSelection}>Clear</button>
+          <div className="session-bar multi">
+            <div className="session-left counts-inline">{counts.vocabReviewed}/{counts.vocabTotal} words · {counts.phraseReviewed}/{counts.phraseTotal} phrases</div>
+            <div className="hero-actions">
+              <div className="session-bar compact">
+                <div className="session-timer" aria-label="Elapsed study time">{studySession.formatElapsed()}</div>
+                <div className="session-right">
+                  {!studySession.active && (
+                    <button className="secondary start-btn" disabled={weeks.length === 0} onClick={() => weeks.length && studySession.start(weeks.map(w => w.id))}>Start</button>
+                  )}
+                  {studySession.active && (
+                    <button className="secondary stop-btn" onClick={() => studySession.stop()}>Stop</button>
+                  )}
+                  <button className="ghost reset-btn" onClick={() => studySession.reset()} aria-label="Reset session">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
@@ -127,8 +154,8 @@ export function WeekView({
                     <StudyCollection
                       type="vocab"
                       items={combinedContent.vocab.filter(v => v.weekId === w.id)}
-                      reviewedIds={session.vocabReviewed || []}
-                      onToggleReviewed={(itemId) => onMarkReviewed(itemId, 'vocab')}
+                      reviewedIds={Array.from(studySession.reviewed.vocab[w.id] || [])}
+                      onToggleReviewed={(itemId) => studySession.toggleReviewed(w.id, itemId, 'vocab')}
                       audioConfig={audioConfig}
                       vocabList={combinedContent.vocab}
                     />
@@ -139,8 +166,11 @@ export function WeekView({
               <StudyCollection
                 type="vocab"
                 items={combinedContent.vocab}
-                reviewedIds={session.vocabReviewed || []}
-                onToggleReviewed={(itemId) => onMarkReviewed(itemId, 'vocab')}
+                reviewedIds={combinedContent.vocab.filter(v => (studySession.reviewed.vocab[v.weekId] || new Set()).has(v.id)).map(v => v.id)}
+                onToggleReviewed={(itemId) => {
+                  const item = combinedContent.vocab.find(v => v.id === itemId)
+                  if (item) studySession.toggleReviewed(item.weekId, itemId, 'vocab')
+                }}
                 audioConfig={audioConfig}
                 vocabList={combinedContent.vocab}
               />
@@ -157,8 +187,8 @@ export function WeekView({
                     <StudyCollection
                       type="phrase"
                       items={combinedContent.phrases.filter(p => p.weekId === w.id)}
-                      reviewedIds={session.phraseReviewed || []}
-                      onToggleReviewed={(itemId) => onMarkReviewed(itemId, 'phrase')}
+                      reviewedIds={Array.from(studySession.reviewed.phrase[w.id] || [])}
+                      onToggleReviewed={(itemId) => studySession.toggleReviewed(w.id, itemId, 'phrase')}
                       audioConfig={audioConfig}
                       vocabList={combinedContent.vocab}
                     />
@@ -169,8 +199,11 @@ export function WeekView({
               <StudyCollection
                 type="phrase"
                 items={combinedContent.phrases}
-                reviewedIds={session.phraseReviewed || []}
-                onToggleReviewed={(itemId) => onMarkReviewed(itemId, 'phrase')}
+                reviewedIds={combinedContent.phrases.filter(p => (studySession.reviewed.phrase[p.weekId] || new Set()).has(p.id)).map(p => p.id)}
+                onToggleReviewed={(itemId) => {
+                  const item = combinedContent.phrases.find(p => p.id === itemId)
+                  if (item) studySession.toggleReviewed(item.weekId, itemId, 'phrase')
+                }}
                 audioConfig={audioConfig}
                 vocabList={combinedContent.vocab}
               />

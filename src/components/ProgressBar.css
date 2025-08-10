@@ -1,11 +1,13 @@
 .progress-bar-container {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: 8px;
+  right: 8px;
   background: #0F1420;
-  border-top: 1px solid #27324A;
+  border: 1px solid #27324A;
+  border-radius: 12px;
   z-index: 20;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
 
 .progress-content {
