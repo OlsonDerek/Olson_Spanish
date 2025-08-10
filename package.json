@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
-    "preact": "^10.19.3"
+  "preact": "^10.19.3",
+  "web-vitals": "^4.2.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.7.0",

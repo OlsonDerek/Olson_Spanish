@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'preact/hooks'
+import { useState, useMemo, useEffect } from 'preact/hooks'
 import { useAudio } from '../hooks/useAudio'
 import { highlightVocabInPhrase } from '../utils/phraseHighlighting'
+import { track } from '../utils/analytics.js'
 import './StudyCard.css'
 
 const STATES = {
@@ -20,19 +21,35 @@ export function StudyCard({ type, item, isReviewed, onToggleReviewed, audioConfi
   }, [type, item.spanish, vocabList])
 
   const cycle = () => {
-    if (state === STATES.SPANISH) setState(STATES.ENGLISH)
-    else if (state === STATES.ENGLISH && hasConjugations) setState(STATES.CONJUGATIONS)
-    else setState(STATES.SPANISH)
+    let to
+    if (state === STATES.SPANISH) { to = STATES.ENGLISH; setState(STATES.ENGLISH) }
+    else if (state === STATES.ENGLISH && hasConjugations) { to = STATES.CONJUGATIONS; setState(STATES.CONJUGATIONS) }
+    else { to = STATES.SPANISH; setState(STATES.SPANISH) }
+    track('study.card_cycle', { id: item.id, from: state, to, type })
   }
 
   const handlePlay = async (e) => {
     e.stopPropagation()
-    try { await playPhrase(item.spanish, item.audioUrl) } catch(err) { console.warn(err) }
+    const started = performance.now()
+    try { 
+      await playPhrase(item.spanish, item.audioUrl)
+      track('study.audio_play', { id: item.id, type, duration_ms: performance.now() - started })
+    } catch(err) { 
+      console.warn(err)
+      track('error.audio_play_fail', { id: item.id, type, message: err?.message })
+    }
   }
   const handleReview = (e) => {
     e.stopPropagation()
     onToggleReviewed()
+    track('study.toggle_reviewed', { id: item.id, type, to_state: !isReviewed })
   }
+
+  // Fire card shown (mount) event once
+  useEffect(() => {
+    track('study.card_shown', { id: item.id, type })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const renderContent = () => {
     if (type === 'vocab') {

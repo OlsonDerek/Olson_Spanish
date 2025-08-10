@@ -12,6 +12,7 @@ import { VoiceSelector } from './components/VoiceSelector'
 import { useSession } from './hooks/useSession'
 import { useMultiWeekSelection } from './hooks/useMultiWeekSelection'
 import './app.css'
+import { track } from './utils/analytics.js'
 
 export function App() {
   const [sideNavOpen, setSideNavOpen] = useState(false)
@@ -56,6 +57,9 @@ export function App() {
   const currentCourse = config?.courses?.find(c => c.id === currentCourseId)
 
   const handleWeekSelect = (weekId) => {
+    if (weekId !== currentWeekId) {
+      track('nav.week_select', { from: currentWeekId, to: weekId })
+    }
     setCurrentWeekId(weekId)
     setViewMode('week')
     selectSingleWeek(weekId)
@@ -64,6 +68,9 @@ export function App() {
   }
 
   const handleUnitSelect = (unitId) => {
+    if (unitId !== currentUnitId) {
+      track('nav.unit_select', { from: currentUnitId, to: unitId })
+    }
     setCurrentUnitId(unitId)
     setViewMode('unit')
     setSideNavOpen(false)
@@ -71,6 +78,9 @@ export function App() {
   }
 
   const handleCourseSelect = (courseId) => {
+    if (courseId !== currentCourseId) {
+      track('nav.course_select', { from: currentCourseId, to: courseId })
+    }
     setCurrentCourseId(courseId)
     setViewMode('course')
     setSideNavOpen(false)
@@ -82,6 +92,7 @@ export function App() {
     if (selectedWeekIds && selectedWeekIds.size) {
       // create array to avoid mutating while iterating
       Array.from(selectedWeekIds).forEach(id => toggleWeekSelection(id))
+      track('nav.clear_week_selection', { count: selectedWeekIds.size })
     }
   }
 

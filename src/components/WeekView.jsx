@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'preact/hooks'
+import { track } from '../utils/analytics.js'
 import { StudyCollection } from './StudyCollection'
 import './WeekView.css'
 
@@ -99,13 +100,13 @@ export function WeekView({
       <div className="tab-rail">
         <button
           className={`pill-tab ${activeTab === 'vocab' ? 'active' : ''}`}
-          onClick={() => setActiveTab('vocab')}
+          onClick={() => { setActiveTab('vocab'); track('nav.tab_change', { to_tab: 'vocab' }) }}
         >
           Vocabulary <span className="count">{combinedContent.vocab.length}</span>
         </button>
         <button
           className={`pill-tab ${activeTab === 'phrases' ? 'active' : ''}`}
-          onClick={() => setActiveTab('phrases')}
+          onClick={() => { setActiveTab('phrases'); track('nav.tab_change', { to_tab: 'phrases' }) }}
         >
           Phrases <span className="count">{combinedContent.phrases.length}</span>
         </button>
