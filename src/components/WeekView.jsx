@@ -62,12 +62,26 @@ export function WeekView({
 
   const singleWeek = weeks.length === 1 ? weeks[0] : null
 
-  const counts = {
-    vocabReviewed: Object.values(studySession.reviewed.vocab).reduce((a, set) => a + set.size, 0),
-    phraseReviewed: Object.values(studySession.reviewed.phrase).reduce((a, set) => a + set.size, 0),
-    vocabTotal: combinedContent.vocab.length,
-    phraseTotal: combinedContent.phrases.length
-  }
+  // Counts: during an active session show ONLY this session's progress (fresh start);
+  // when not active show cumulative (ever + any lingering in-memory which should be none).
+  const counts = useMemo(() => {
+    const vocabTotal = combinedContent.vocab.length
+    const phraseTotal = combinedContent.phrases.length
+    let vocabReviewed = 0
+    let phraseReviewed = 0
+    weeks.forEach(w => {
+      if (studySession.active) {
+        vocabReviewed += (studySession.reviewed.vocab[w.id] || new Set()).size
+        phraseReviewed += (studySession.reviewed.phrase[w.id] || new Set()).size
+      } else {
+        const everV = studySession.everReviewed.vocab[w.id] || new Set()
+        vocabReviewed += everV.size
+        const everP = studySession.everReviewed.phrase[w.id] || new Set()
+        phraseReviewed += everP.size
+      }
+    })
+    return { vocabReviewed, phraseReviewed, vocabTotal, phraseTotal }
+  }, [weeks, combinedContent, studySession.reviewed, studySession.everReviewed, studySession.active])
 
   return (
     <div className="week-view">
@@ -154,7 +168,9 @@ export function WeekView({
                     <StudyCollection
                       type="vocab"
                       items={combinedContent.vocab.filter(v => v.weekId === w.id)}
-                      reviewedIds={Array.from(studySession.reviewed.vocab[w.id] || [])}
+                      reviewedIds={studySession.active
+                        ? Array.from(studySession.reviewed.vocab[w.id] || [])
+                        : Array.from(studySession.everReviewed.vocab[w.id] || [])}
                       onToggleReviewed={(itemId) => studySession.toggleReviewed(w.id, itemId, 'vocab')}
                       audioConfig={audioConfig}
                       vocabList={combinedContent.vocab}
@@ -166,7 +182,14 @@ export function WeekView({
               <StudyCollection
                 type="vocab"
                 items={combinedContent.vocab}
-                reviewedIds={combinedContent.vocab.filter(v => (studySession.reviewed.vocab[v.weekId] || new Set()).has(v.id)).map(v => v.id)}
+                reviewedIds={combinedContent.vocab.filter(v => {
+                  if (studySession.active) {
+                    const sess = studySession.reviewed.vocab[v.weekId] || new Set()
+                    return sess.has(v.id)
+                  }
+                  const ever = studySession.everReviewed.vocab[v.weekId] || new Set()
+                  return ever.has(v.id)
+                }).map(v => v.id)}
                 onToggleReviewed={(itemId) => {
                   const item = combinedContent.vocab.find(v => v.id === itemId)
                   if (item) studySession.toggleReviewed(item.weekId, itemId, 'vocab')
@@ -187,7 +210,9 @@ export function WeekView({
                     <StudyCollection
                       type="phrase"
                       items={combinedContent.phrases.filter(p => p.weekId === w.id)}
-                      reviewedIds={Array.from(studySession.reviewed.phrase[w.id] || [])}
+                      reviewedIds={studySession.active
+                        ? Array.from(studySession.reviewed.phrase[w.id] || [])
+                        : Array.from(studySession.everReviewed.phrase[w.id] || [])}
                       onToggleReviewed={(itemId) => studySession.toggleReviewed(w.id, itemId, 'phrase')}
                       audioConfig={audioConfig}
                       vocabList={combinedContent.vocab}
@@ -199,7 +224,14 @@ export function WeekView({
               <StudyCollection
                 type="phrase"
                 items={combinedContent.phrases}
-                reviewedIds={combinedContent.phrases.filter(p => (studySession.reviewed.phrase[p.weekId] || new Set()).has(p.id)).map(p => p.id)}
+                reviewedIds={combinedContent.phrases.filter(p => {
+                  if (studySession.active) {
+                    const sess = studySession.reviewed.phrase[p.weekId] || new Set()
+                    return sess.has(p.id)
+                  }
+                  const ever = studySession.everReviewed.phrase[p.weekId] || new Set()
+                  return ever.has(p.id)
+                }).map(p => p.id)}
                 onToggleReviewed={(itemId) => {
                   const item = combinedContent.phrases.find(p => p.id === itemId)
                   if (item) studySession.toggleReviewed(item.weekId, itemId, 'phrase')

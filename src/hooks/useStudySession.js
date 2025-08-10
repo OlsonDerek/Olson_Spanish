@@ -77,15 +77,31 @@ export function useStudySession(config) {
     try { localStorage.removeItem('studySession.lastElapsedMs') } catch {}
   }, [stoppedElapsedMs])
 
+  // Toggle reviewed state. While a session is active we keep changes in-memory (merged on stop).
+  // When no active session, we modify persistent everReviewed immediately so users can mark
+  // progress ad‑hoc without starting a timer.
   const toggleReviewed = useCallback((weekId, itemId, type) => {
-    if (!active || !weekId) return
-    setReviewed(prev => {
-      const next = { vocab: { ...prev.vocab }, phrase: { ...prev.phrase } }
-      if (!next[type][weekId]) next[type][weekId] = new Set()
-      const setRef = next[type][weekId]
-      if (setRef.has(itemId)) setRef.delete(itemId); else setRef.add(itemId)
-      return next
-    })
+    if (!weekId) return
+    if (active) {
+      setReviewed(prev => {
+        const next = { vocab: { ...prev.vocab }, phrase: { ...prev.phrase } }
+        if (!next[type][weekId]) next[type][weekId] = new Set()
+        const setRef = next[type][weekId]
+        if (setRef.has(itemId)) setRef.delete(itemId); else setRef.add(itemId)
+        return next
+      })
+    } else {
+      setEverReviewed(prev => {
+        const next = { vocab: { ...prev.vocab }, phrase: { ...prev.phrase } }
+        if (!next[type][weekId]) next[type][weekId] = new Set()
+        const setRef = new Set(next[type][weekId])
+        if (setRef.has(itemId)) setRef.delete(itemId); else setRef.add(itemId)
+        next[type][weekId] = setRef
+        // Persist immediately
+        try { localStorage.setItem(`progress.${type}Reviewed.${weekId}`, JSON.stringify(Array.from(setRef))) } catch {}
+        return next
+      })
+    }
   }, [active])
 
   const stop = useCallback(() => {
