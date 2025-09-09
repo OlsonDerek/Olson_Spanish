@@ -1,0 +1,93 @@
+{
+  "id": "2025-09-01",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 3: Comida, Bebida y Oración",
+  "startDate": "2025-09-01",
+  "endDate": "2025-09-07",
+  "vocab": [
+    { "id": "comida", "spanish": "comida", "english": "food", "type": "noun" },
+    { "id": "bebida", "spanish": "bebida", "english": "drink", "type": "noun" },
+    { "id": "agua", "spanish": "agua", "english": "water", "type": "noun" },
+    { "id": "leche", "spanish": "leche", "english": "milk", "type": "noun" },
+    { "id": "jugo", "spanish": "jugo", "english": "juice", "type": "noun" },
+    { "id": "pan", "spanish": "pan", "english": "bread", "type": "noun" },
+    { "id": "arroz", "spanish": "arroz", "english": "rice", "type": "noun" },
+    { "id": "frijoles", "spanish": "frijoles", "english": "beans", "type": "noun" },
+    { "id": "pollo", "spanish": "pollo", "english": "chicken", "type": "noun" },
+    { "id": "ensalada", "spanish": "ensalada", "english": "salad", "type": "noun" },
+    { "id": "sopa", "spanish": "sopa", "english": "soup", "type": "noun" },
+    { "id": "postre", "spanish": "postre", "english": "dessert", "type": "noun" },
+    { "id": "mesa", "spanish": "mesa", "english": "table", "type": "noun" },
+    { "id": "plato", "spanish": "plato", "english": "plate", "type": "noun" },
+    { "id": "vaso", "spanish": "vaso", "english": "glass", "type": "noun" },
+
+    {
+      "id": "comer",
+      "spanish": "comer",
+      "english": "to eat",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "como", "tú": "comes", "él/ella": "come", "nosotros": "comemos", "vosotros": "coméis", "ellos": "comen" },
+        "preterite": { "yo": "comí", "tú": "comiste", "él/ella": "comió", "nosotros": "comimos", "vosotros": "comisteis", "ellos": "comieron" },
+        "imperfect": { "yo": "comía", "tú": "comías", "él/ella": "comía", "nosotros": "comíamos", "vosotros": "comíais", "ellos": "comían" }
+      }
+    },
+    {
+      "id": "beber",
+      "spanish": "beber",
+      "english": "to drink",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "bebo", "tú": "bebes", "él/ella": "bebe", "nosotros": "bebemos", "vosotros": "bebéis", "ellos": "beben" },
+        "preterite": { "yo": "bebí", "tú": "bebiste", "él/ella": "bebió", "nosotros": "bebimos", "vosotros": "bebisteis", "ellos": "bebieron" },
+        "imperfect": { "yo": "bebía", "tú": "bebías", "él/ella": "bebía", "nosotros": "bebíamos", "vosotros": "bebíais", "ellos": "bebían" }
+      }
+    },
+    {
+      "id": "cocinar",
+      "spanish": "cocinar",
+      "english": "to cook",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "cocino", "tú": "cocinas", "él/ella": "cocina", "nosotros": "cocinamos", "vosotros": "cocináis", "ellos": "cocinan" },
+        "preterite": { "yo": "cociné", "tú": "cocinaste", "él/ella": "cocinó", "nosotros": "cocinamos", "vosotros": "cocinasteis", "ellos": "cocinaron" },
+        "imperfect": { "yo": "cocinaba", "tú": "cocinabas", "él/ella": "cocinaba", "nosotros": "cocinábamos", "vosotros": "cocinabais", "ellos": "cocinaban" }
+      }
+    },
+    {
+      "id": "preparar",
+      "spanish": "preparar",
+      "english": "to prepare; to set up",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "preparo", "tú": "preparas", "él/ella": "prepara", "nosotros": "preparamos", "vosotros": "preparáis", "ellos": "preparan" },
+        "preterite": { "yo": "preparé", "tú": "preparaste", "él/ella": "preparó", "nosotros": "preparamos", "vosotros": "preparasteis", "ellos": "prepararon" },
+        "imperfect": { "yo": "preparaba", "tú": "preparabas", "él/ella": "preparaba", "nosotros": "preparábamos", "vosotros": "preparabais", "ellos": "preparaban" }
+      }
+    },
+    {
+      "id": "orar",
+      "spanish": "orar",
+      "english": "to pray",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "oro", "tú": "oras", "él/ella": "ora", "nosotros": "oramos", "vosotros": "oráis", "ellos": "oran" },
+        "preterite": { "yo": "oré", "tú": "oraste", "él/ella": "oró", "nosotros": "oramos", "vosotros": "orasteis", "ellos": "oraron" },
+        "imperfect": { "yo": "oraba", "tú": "orabas", "él/ella": "oraba", "nosotros": "orábamos", "vosotros": "orabais", "ellos": "oraban" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Preparo la mesa con platos y vasos.", "english": "I set the table with plates and glasses.", "audioUrl": "" },
+    { "id": "p2", "spanish": "Cocinamos arroz con pollo y frijoles.", "english": "We cook rice with chicken and beans.", "audioUrl": "" },
+    { "id": "p3", "spanish": "Hay ensalada y sopa también.", "english": "There is salad and soup too.", "audioUrl": "" },
+    { "id": "p4", "spanish": "La comida y la bebida están en la mesa.", "english": "The food and the drink are on the table.", "audioUrl": "" },
+    { "id": "p5", "spanish": "Antes de comer, oramos para bendecir los alimentos.", "english": "Before eating, we pray to bless the food.", "audioUrl": "" },
+    { "id": "p6", "spanish": "Damos gracias por el pan y el agua.", "english": "We give thanks for the bread and the water.", "audioUrl": "" },
+    { "id": "p7", "spanish": "Bebo jugo y tú bebes leche.", "english": "I drink juice and you drink milk.", "audioUrl": "" },
+    { "id": "p8", "spanish": "Comemos el postre al final.", "english": "We eat dessert at the end.", "audioUrl": "" },
+    { "id": "p9", "spanish": "Oramos otra vez y hablamos con calma.", "english": "We pray again and speak calmly.", "audioUrl": "" },
+    { "id": "p10", "spanish": "Después de comer, preparo agua para todos.", "english": "After eating, I prepare water for everyone.", "audioUrl": "" }
+  ]
+}
