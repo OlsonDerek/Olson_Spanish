@@ -26,3 +26,8 @@ dist-ssr
 dist
 #ignore dist and it's files
 dist/*
+dist/index.html
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
+
+.codacy/

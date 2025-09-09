@@ -1,0 +1,93 @@
+{
+  "id": "2025-08-25",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 4: En la Escuela – Rutina Diaria",
+  "startDate": "2025-08-25",
+  "endDate": "2025-08-31",
+  "vocab": [
+    { "id": "escuela", "spanish": "escuela", "english": "school", "type": "noun" },
+    { "id": "clase", "spanish": "clase", "english": "class", "type": "noun" },
+    { "id": "horario", "spanish": "horario", "english": "schedule", "type": "noun" },
+    { "id": "matematicas", "spanish": "matemáticas", "english": "math", "type": "noun" },
+    { "id": "ciencias", "spanish": "ciencias", "english": "science", "type": "noun" },
+    { "id": "historia", "spanish": "historia", "english": "history", "type": "noun" },
+    { "id": "arte", "spanish": "arte", "english": "art", "type": "noun" },
+    { "id": "educacion_fisica", "spanish": "educación física", "english": "physical education (P.E.)", "type": "noun" },
+    { "id": "biblioteca", "spanish": "biblioteca", "english": "library", "type": "noun" },
+    { "id": "cafeteria", "spanish": "cafetería", "english": "cafeteria", "type": "noun" },
+    { "id": "gimnasio", "spanish": "gimnasio", "english": "gymnasium", "type": "noun" },
+    { "id": "tarea", "spanish": "tarea", "english": "homework", "type": "noun" },
+    { "id": "cuaderno", "spanish": "cuaderno", "english": "notebook", "type": "noun" },
+    { "id": "mochila", "spanish": "mochila", "english": "backpack", "type": "noun" },
+    { "id": "reloj", "spanish": "reloj", "english": "clock; watch", "type": "noun" },
+
+    {
+      "id": "ir",
+      "spanish": "ir",
+      "english": "to go",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "voy", "tú": "vas", "él/ella": "va", "nosotros": "vamos", "vosotros": "vais", "ellos": "van" },
+        "preterite": { "yo": "fui", "tú": "fuiste", "él/ella": "fue", "nosotros": "fuimos", "vosotros": "fuisteis", "ellos": "fueron" },
+        "imperfect": { "yo": "iba", "tú": "ibas", "él/ella": "iba", "nosotros": "íbamos", "vosotros": "ibais", "ellos": "iban" }
+      }
+    },
+    {
+      "id": "hacer",
+      "spanish": "hacer",
+      "english": "to do; to make",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "hago", "tú": "haces", "él/ella": "hace", "nosotros": "hacemos", "vosotros": "hacéis", "ellos": "hacen" },
+        "preterite": { "yo": "hice", "tú": "hiciste", "él/ella": "hizo", "nosotros": "hicimos", "vosotros": "hicisteis", "ellos": "hicieron" },
+        "imperfect": { "yo": "hacía", "tú": "hacías", "él/ella": "hacía", "nosotros": "hacíamos", "vosotros": "hacíais", "ellos": "hacían" }
+      }
+    },
+    {
+      "id": "leer",
+      "spanish": "leer",
+      "english": "to read",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "leo", "tú": "lees", "él/ella": "lee", "nosotros": "leemos", "vosotros": "leéis", "ellos": "leen" },
+        "preterite": { "yo": "leí", "tú": "leíste", "él/ella": "leyó", "nosotros": "leímos", "vosotros": "leísteis", "ellos": "leyeron" },
+        "imperfect": { "yo": "leía", "tú": "leías", "él/ella": "leía", "nosotros": "leíamos", "vosotros": "leíais", "ellos": "leían" }
+      }
+    },
+    {
+      "id": "escribir",
+      "spanish": "escribir",
+      "english": "to write",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "escribo", "tú": "escribes", "él/ella": "escribe", "nosotros": "escribimos", "vosotros": "escribís", "ellos": "escriben" },
+        "preterite": { "yo": "escribí", "tú": "escribiste", "él/ella": "escribió", "nosotros": "escribimos", "vosotros": "escribisteis", "ellos": "escribieron" },
+        "imperfect": { "yo": "escribía", "tú": "escribías", "él/ella": "escribía", "nosotros": "escribíamos", "vosotros": "escribíais", "ellos": "escribían" }
+      }
+    },
+    {
+      "id": "almorzar",
+      "spanish": "almorzar",
+      "english": "to eat lunch",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "almuerzo", "tú": "almuerzas", "él/ella": "almuerza", "nosotros": "almorzamos", "vosotros": "almorzáis", "ellos": "almuerzan" },
+        "preterite": { "yo": "almorcé", "tú": "almorzaste", "él/ella": "almorzó", "nosotros": "almorzamos", "vosotros": "almorzasteis", "ellos": "almorzaron" },
+        "imperfect": { "yo": "almorzaba", "tú": "almorzabas", "él/ella": "almorzaba", "nosotros": "almorzábamos", "vosotros": "almorzabais", "ellos": "almorzaban" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Voy a la escuela temprano.", "english": "I go to school early.", "audioUrl": "" },
+    { "id": "p2", "spanish": "Tengo la clase de matemáticas a las ocho.", "english": "I have math class at eight.", "audioUrl": "" },
+    { "id": "p3", "spanish": "Después voy a la biblioteca para leer.", "english": "Afterward I go to the library to read.", "audioUrl": "" },
+    { "id": "p4", "spanish": "Almorzamos en la cafetería.", "english": "We eat lunch in the cafeteria.", "audioUrl": "" },
+    { "id": "p5", "spanish": "En arte escribo ideas en mi cuaderno.", "english": "In art I write ideas in my notebook.", "audioUrl": "" },
+    { "id": "p6", "spanish": "En ciencias hacemos un experimento.", "english": "In science we do an experiment.", "audioUrl": "" },
+    { "id": "p7", "spanish": "Busco mi mochila y el reloj, luego voy a historia.", "english": "I look for my backpack and the watch, then I go to history.", "audioUrl": "" },
+    { "id": "p8", "spanish": "Mi horario está lleno, pero me gusta educación física.", "english": "My schedule is full, but I like P.E.", "audioUrl": "" },
+    { "id": "p9", "spanish": "A veces leo en el gimnasio mientras espero.", "english": "Sometimes I read in the gym while I wait.", "audioUrl": "" },
+    { "id": "p10", "spanish": "Por la tarde hago la tarea en casa.", "english": "In the afternoon I do homework at home.", "audioUrl": "" }
+  ]
+}
