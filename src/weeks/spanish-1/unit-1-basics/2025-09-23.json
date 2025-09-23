@@ -1,0 +1,87 @@
+{
+  "id": "2025-09-23",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 7: Gustar, Encantar y Odiar",
+  "startDate": "2025-09-23",
+  "endDate": "2025-09-29",
+  "vocab": [
+    {
+      "id": "gustar",
+      "spanish": "gustar",
+      "english": "to like",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "me gusta", "tú": "te gusta", "él/ella": "le gusta", "nosotros": "nos gusta", "vosotros": "os gusta", "ellos": "les gusta" },
+        "preterite": { "yo": "me gustó", "tú": "te gustó", "él/ella": "le gustó", "nosotros": "nos gustó", "vosotros": "os gustó", "ellos": "les gustó" },
+        "imperfect": { "yo": "me gustaba", "tú": "te gustaba", "él/ella": "le gustaba", "nosotros": "nos gustaba", "vosotros": "os gustaba", "ellos": "les gustaba" }
+      }
+    },
+    {
+      "id": "encantar",
+      "spanish": "encantar",
+      "english": "to love (something)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "me encanta", "tú": "te encanta", "él/ella": "le encanta", "nosotros": "nos encanta", "vosotros": "os encanta", "ellos": "les encanta" },
+        "preterite": { "yo": "me encantó", "tú": "te encantó", "él/ella": "le encantó", "nosotros": "nos encantó", "vosotros": "os encantó", "ellos": "les encantó" },
+        "imperfect": { "yo": "me encantaba", "tú": "te encantaba", "él/ella": "le encantaba", "nosotros": "nos encantaba", "vosotros": "os encantaba", "ellos": "les encantaba" }
+      }
+    },
+    {
+      "id": "odiar",
+      "spanish": "odiar",
+      "english": "to hate",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "odio", "tú": "odias", "él/ella": "odia", "nosotros": "odiamos", "vosotros": "odiáis", "ellos": "odian" },
+        "preterite": { "yo": "odié", "tú": "odiaste", "él/ella": "odió", "nosotros": "odiamos", "vosotros": "odiasteis", "ellos": "odiaron" },
+        "imperfect": { "yo": "odiaba", "tú": "odiabas", "él/ella": "odiaba", "nosotros": "odiábamos", "vosotros": "odiabais", "ellos": "odiaban" }
+      }
+    },
+    { "id": "leer", "spanish": "leer", "english": "to read", "type": "verb" },
+    { "id": "correr", "spanish": "correr", "english": "to run", "type": "verb" },
+    { "id": "dibujar", "spanish": "dibujar", "english": "to draw", "type": "verb" },
+    { "id": "cantar", "spanish": "cantar", "english": "to sing", "type": "verb" },
+    { "id": "bailar", "spanish": "bailar", "english": "to dance", "type": "verb" },
+    { "id": "jugar", "spanish": "jugar", "english": "to play (games/sports)", "type": "verb" },
+    { "id": "estudiar", "spanish": "estudiar", "english": "to study", "type": "verb" },
+    { "id": "comer", "spanish": "comer", "english": "to eat", "type": "verb" },
+    { "id": "beber", "spanish": "beber", "english": "to drink", "type": "verb" },
+    { "id": "escuchar", "spanish": "escuchar", "english": "to listen", "type": "verb" },
+    { "id": "pelicula", "spanish": "película", "english": "movie", "type": "noun" },
+    { "id": "musica", "spanish": "música", "english": "music", "type": "noun" },
+    { "id": "videojuegos", "spanish": "videojuegos", "english": "video games", "type": "noun" },
+    { "id": "futbol", "spanish": "fútbol", "english": "soccer", "type": "noun" },
+    { "id": "arte", "spanish": "arte", "english": "art", "type": "noun" },
+    { "id": "matematicas", "spanish": "matemáticas", "english": "math", "type": "noun" },
+    { "id": "historia", "spanish": "historia", "english": "history", "type": "noun" },
+    { "id": "ciencias", "spanish": "ciencias", "english": "science", "type": "noun" },
+    { "id": "pan", "spanish": "pan", "english": "bread", "type": "noun" },
+    { "id": "arroz", "spanish": "arroz", "english": "rice", "type": "noun" },
+    { "id": "pollo", "spanish": "pollo", "english": "chicken", "type": "noun" },
+    { "id": "ensalada", "spanish": "ensalada", "english": "salad", "type": "noun" },
+    { "id": "manzana", "spanish": "manzana", "english": "apple", "type": "noun" },
+    { "id": "leche", "spanish": "leche", "english": "milk", "type": "noun" },
+    { "id": "agua", "spanish": "agua", "english": "water", "type": "noun" },
+    { "id": "pizza", "spanish": "pizza", "english": "pizza", "type": "noun" },
+    { "id": "helado", "spanish": "helado", "english": "ice cream", "type": "noun" }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Me gusta la música.", "english": "I like music.", "audioUrl": "" },
+    { "id": "p2", "spanish": "No me gusta el brócoli.", "english": "I don’t like broccoli.", "audioUrl": "" },
+    { "id": "p3", "spanish": "¿Te gusta el fútbol?", "english": "Do you like soccer?", "audioUrl": "" },
+    { "id": "p4", "spanish": "Nos gusta estudiar juntos.", "english": "We like to study together.", "audioUrl": "" },
+    { "id": "p5", "spanish": "A mi hermana le gusta dibujar.", "english": "My sister likes to draw.", "audioUrl": "" },
+    { "id": "p6", "spanish": "Me gustan las frutas.", "english": "I like fruits.", "audioUrl": "" },
+    { "id": "p7", "spanish": "¿Qué te gusta más, matemáticas o arte?", "english": "What do you like more, math or art?", "audioUrl": "" },
+    { "id": "p8", "spanish": "Me encanta bailar con mis amigos.", "english": "I love dancing with my friends.", "audioUrl": "" },
+    { "id": "p9", "spanish": "A ellos les encanta jugar videojuegos.", "english": "They love playing video games.", "audioUrl": "" },
+    { "id": "p10", "spanish": "Me encantan las películas.", "english": "I love movies.", "audioUrl": "" },
+    { "id": "p11", "spanish": "Odio correr en la mañana.", "english": "I hate running in the morning.", "audioUrl": "" },
+    { "id": "p12", "spanish": "¿Odias las tareas difíciles?", "english": "Do you hate difficult homework?", "audioUrl": "" },
+    { "id": "p13", "spanish": "Ella odiaba el frío cuando era niña.", "english": "She hated the cold when she was a child.", "audioUrl": "" },
+    { "id": "p14", "spanish": "Me gusta leer la Biblia.", "english": "I like to read the Bible.", "audioUrl": "" },
+    { "id": "p15", "spanish": "Me encanta pasar tiempo con mi familia.", "english": "I love spending time with my family.", "audioUrl": "" }
+  ]
+}
