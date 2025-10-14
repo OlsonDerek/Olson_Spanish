@@ -1,0 +1,77 @@
+{
+  "id": "2025-10-14",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 8: En el Restaurante",
+  "startDate": "2025-10-14",
+  "endDate": "2025-10-20",
+  "vocab": [
+    { "id": "comer", "spanish": "comer", "english": "to eat", "type": "verb",
+      "conjugations": {
+        "present": {"yo": "como", "tú": "comes", "él/ella": "come", "nosotros": "comemos", "vosotros": "coméis", "ellos": "comen"},
+        "preterite": {"yo": "comí", "tú": "comiste", "él/ella": "comió", "nosotros": "comimos", "vosotros": "comisteis", "ellos": "comieron"},
+        "imperfect": {"yo": "comía", "tú": "comías", "él/ella": "comía", "nosotros": "comíamos", "vosotros": "comíais", "ellos": "comían"}
+      }
+    },
+    { "id": "beber", "spanish": "beber", "english": "to drink", "type": "verb",
+      "conjugations": {
+        "present": {"yo": "bebo", "tú": "bebes", "él/ella": "bebe", "nosotros": "bebemos", "vosotros": "bebéis", "ellos": "beben"},
+        "preterite": {"yo": "bebí", "tú": "bebiste", "él/ella": "bebió", "nosotros": "bebimos", "vosotros": "bebisteis", "ellos": "bebieron"},
+        "imperfect": {"yo": "bebía", "tú": "bebías", "él/ella": "bebía", "nosotros": "bebíamos", "vosotros": "bebíais", "ellos": "bebían"}
+      }
+    },
+    { "id": "pedir", "spanish": "pedir", "english": "to ask for / to order", "type": "verb",
+      "conjugations": {
+        "present": {"yo": "pido", "tú": "pides", "él/ella": "pide", "nosotros": "pedimos", "vosotros": "pedís", "ellos": "piden"},
+        "preterite": {"yo": "pedí", "tú": "pediste", "él/ella": "pidió", "nosotros": "pedimos", "vosotros": "pedisteis", "ellos": "pidieron"},
+        "imperfect": {"yo": "pedía", "tú": "pedías", "él/ella": "pedía", "nosotros": "pedíamos", "vosotros": "pedíais", "ellos": "pedían"}
+      }
+    },
+    { "id": "traer", "spanish": "traer", "english": "to bring", "type": "verb",
+      "conjugations": {
+        "present": {"yo": "traigo", "tú": "traes", "él/ella": "trae", "nosotros": "traemos", "vosotros": "traéis", "ellos": "traen"},
+        "preterite": {"yo": "traje", "tú": "trajiste", "él/ella": "trajo", "nosotros": "trajimos", "vosotros": "trajisteis", "ellos": "trajeron"},
+        "imperfect": {"yo": "traía", "tú": "traías", "él/ella": "traía", "nosotros": "traíamos", "vosotros": "traíais", "ellos": "traían"}
+      }
+    },
+    { "id": "pagar", "spanish": "pagar", "english": "to pay", "type": "verb",
+      "conjugations": {
+        "present": {"yo": "pago", "tú": "pagas", "él/ella": "paga", "nosotros": "pagamos", "vosotros": "pagáis", "ellos": "pagan"},
+        "preterite": {"yo": "pagué", "tú": "pagaste", "él/ella": "pagó", "nosotros": "pagamos", "vosotros": "pagasteis", "ellos": "pagaron"},
+        "imperfect": {"yo": "pagaba", "tú": "pagabas", "él/ella": "pagaba", "nosotros": "pagábamos", "vosotros": "pagabais", "ellos": "pagaban"}
+      }
+    },
+    { "id": "menú", "spanish": "menú", "english": "menu", "type": "noun" },
+    { "id": "cuenta", "spanish": "cuenta", "english": "bill / check", "type": "noun" },
+    { "id": "agua", "spanish": "agua", "english": "water", "type": "noun" },
+    { "id": "refresco", "spanish": "refresco", "english": "soda / soft drink", "type": "noun" },
+    { "id": "pollo", "spanish": "pollo", "english": "chicken", "type": "noun" },
+    { "id": "carne", "spanish": "carne", "english": "meat / beef", "type": "noun" },
+    { "id": "taco", "spanish": "taco", "english": "taco", "type": "noun" },
+    { "id": "tamales", "spanish": "tamales", "english": "tamales", "type": "noun" },
+    { "id": "empanada", "spanish": "empanada", "english": "stuffed pastry / empanada", "type": "noun" },
+    { "id": "arroz", "spanish": "arroz", "english": "rice", "type": "noun" },
+    { "id": "frijoles", "spanish": "frijoles", "english": "beans", "type": "noun" },
+    { "id": "postre", "spanish": "postre", "english": "dessert", "type": "noun" },
+    { "id": "baño", "spanish": "baño", "english": "bathroom", "type": "noun" },
+    { "id": "mesero", "spanish": "mesero / camarero", "english": "waiter", "type": "noun" },
+    { "id": "propina", "spanish": "propina", "english": "tip", "type": "noun" }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Buenos días, ¿tienen una mesa para dos?", "english": "Good morning, do you have a table for two?", "audioUrl": "" },
+    { "id": "p2", "spanish": "Quisiera el menú, por favor.", "english": "I would like the menu, please.", "audioUrl": "" },
+    { "id": "p3", "spanish": "¿Qué recomienda hoy?", "english": "What do you recommend today?", "audioUrl": "" },
+    { "id": "p4", "spanish": "Para mí, el taco de pollo, por favor.", "english": "For me, the chicken taco, please.", "audioUrl": "" },
+    { "id": "p5", "spanish": "Voy a pedir una empanada y un refresco.", "english": "I'm going to order an empanada and a soda.", "audioUrl": "" },
+    { "id": "p6", "spanish": "¿Me puede traer agua, por favor?", "english": "Can you bring me some water, please?", "audioUrl": "" },
+    { "id": "p7", "spanish": "La comida está deliciosa.", "english": "The food is delicious.", "audioUrl": "" },
+    { "id": "p8", "spanish": "¿Dónde está el baño?", "english": "Where is the bathroom?", "audioUrl": "" },
+    { "id": "p9", "spanish": "¿Puedo usar el baño, por favor?", "english": "May I use the bathroom, please?", "audioUrl": "" },
+    { "id": "p10", "spanish": "Quisiera probar los tamales.", "english": "I would like to try the tamales.", "audioUrl": "" },
+    { "id": "p11", "spanish": "¿Tienen postre hoy?", "english": "Do you have dessert today?", "audioUrl": "" },
+    { "id": "p12", "spanish": "La cuenta, por favor.", "english": "The check, please.", "audioUrl": "" },
+    { "id": "p13", "spanish": "¿Aceptan tarjeta o solo efectivo?", "english": "Do you accept card or only cash?", "audioUrl": "" },
+    { "id": "p14", "spanish": "Todo estuvo muy rico, gracias.", "english": "Everything was very tasty, thank you.", "audioUrl": "" },
+    { "id": "p15", "spanish": "Dejo la propina en la mesa.", "english": "I’m leaving the tip on the table.", "audioUrl": "" }
+  ]
+}
