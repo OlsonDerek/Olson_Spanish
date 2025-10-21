@@ -1,0 +1,212 @@
+{
+  "id": "2025-10-21",
+  "courseId": "spanish-1",
+  "unitId": "unit-6-pasatiempos",
+  "title": "Week 9: Pasatiempos y Deportes",
+  "startDate": "2025-10-21",
+  "endDate": "2025-10-27",
+  "vocab": [
+    {
+      "id": "jugar",
+      "spanish": "jugar",
+      "english": "to play (a sport/game)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "juego", "tú": "juegas", "él/ella": "juega", "nosotros": "jugamos", "vosotros": "jugáis", "ellos": "juegan" },
+        "preterite": { "yo": "jugué", "tú": "jugaste", "él/ella": "jugó", "nosotros": "jugamos", "vosotros": "jugasteis", "ellos": "jugaron" },
+        "imperfect": { "yo": "jugaba", "tú": "jugabas", "él/ella": "jugaba", "nosotros": "jugábamos", "vosotros": "jugabais", "ellos": "jugaban" }
+      }
+    },
+    {
+      "id": "practicar",
+      "spanish": "practicar",
+      "english": "to practice",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "practico", "tú": "practicas", "él/ella": "practica", "nosotros": "practicamos", "vosotros": "practicáis", "ellos": "practican" },
+        "preterite": { "yo": "practiqué", "tú": "practicaste", "él/ella": "practicó", "nosotros": "practicamos", "vosotros": "practicasteis", "ellos": "practicaron" },
+        "imperfect": { "yo": "practicaba", "tú": "practicabas", "él/ella": "practicaba", "nosotros": "practicábamos", "vosotros": "practicabais", "ellos": "practicaban" }
+      }
+    },
+    {
+      "id": "correr",
+      "spanish": "correr",
+      "english": "to run",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "corro", "tú": "corres", "él/ella": "corre", "nosotros": "corremos", "vosotros": "corréis", "ellos": "corren" },
+        "preterite": { "yo": "corrí", "tú": "corriste", "él/ella": "corrió", "nosotros": "corrimos", "vosotros": "corristeis", "ellos": "corrieron" },
+        "imperfect": { "yo": "corría", "tú": "corrías", "él/ella": "corría", "nosotros": "corríamos", "vosotros": "corríais", "ellos": "corrían" }
+      }
+    },
+    {
+      "id": "nadar",
+      "spanish": "nadar",
+      "english": "to swim",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "nado", "tú": "nadas", "él/ella": "nada", "nosotros": "nadamos", "vosotros": "nadáis", "ellos": "nadan" },
+        "preterite": { "yo": "nadé", "tú": "nadaste", "él/ella": "nadó", "nosotros": "nadamos", "vosotros": "nadasteis", "ellos": "nadaron" },
+        "imperfect": { "yo": "nadaba", "tú": "nadabas", "él/ella": "nadaba", "nosotros": "nadábamos", "vosotros": "nadabais", "ellos": "nadaban" }
+      }
+    },
+    {
+      "id": "leer",
+      "spanish": "leer",
+      "english": "to read",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "leo", "tú": "lees", "él/ella": "lee", "nosotros": "leemos", "vosotros": "leéis", "ellos": "leen" },
+        "preterite": { "yo": "leí", "tú": "leíste", "él/ella": "leyó", "nosotros": "leímos", "vosotros": "leísteis", "ellos": "leyeron" },
+        "imperfect": { "yo": "leía", "tú": "leías", "él/ella": "leía", "nosotros": "leíamos", "vosotros": "leíais", "ellos": "leían" }
+      }
+    },
+    {
+      "id": "escribir",
+      "spanish": "escribir",
+      "english": "to write",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "escribo", "tú": "escribes", "él/ella": "escribe", "nosotros": "escribimos", "vosotros": "escribís", "ellos": "escriben" },
+        "preterite": { "yo": "escribí", "tú": "escribiste", "él/ella": "escribió", "nosotros": "escribimos", "vosotros": "escribisteis", "ellos": "escribieron" },
+        "imperfect": { "yo": "escribía", "tú": "escribías", "él/ella": "escribía", "nosotros": "escribíamos", "vosotros": "escribíais", "ellos": "escribían" }
+      }
+    },
+    {
+      "id": "bailar",
+      "spanish": "bailar",
+      "english": "to dance",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "bailo", "tú": "bailas", "él/ella": "baila", "nosotros": "bailamos", "vosotros": "bailáis", "ellos": "bailan" },
+        "preterite": { "yo": "bailé", "tú": "bailaste", "él/ella": "bailó", "nosotros": "bailamos", "vosotros": "bailasteis", "ellos": "bailaron" },
+        "imperfect": { "yo": "bailaba", "tú": "bailabas", "él/ella": "bailaba", "nosotros": "bailábamos", "vosotros": "bailabais", "ellos": "bailaban" }
+      }
+    },
+    {
+      "id": "ver",
+      "spanish": "ver",
+      "english": "to watch/see",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "veo", "tú": "ves", "él/ella": "ve", "nosotros": "vemos", "vosotros": "veis", "ellos": "ven" },
+        "preterite": { "yo": "vi", "tú": "viste", "él/ella": "vio", "nosotros": "vimos", "vosotros": "visteis", "ellos": "vieron" },
+        "imperfect": { "yo": "veía", "tú": "veías", "él/ella": "veía", "nosotros": "veíamos", "vosotros": "veíais", "ellos": "veían" }
+      }
+    },
+    {
+      "id": "escuchar",
+      "spanish": "escuchar",
+      "english": "to listen (to)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "escucho", "tú": "escuchas", "él/ella": "escucha", "nosotros": "escuchamos", "vosotros": "escucháis", "ellos": "escuchan" },
+        "preterite": { "yo": "escuché", "tú": "escuchaste", "él/ella": "escuchó", "nosotros": "escuchamos", "vosotros": "escuchasteis", "ellos": "escucharon" },
+        "imperfect": { "yo": "escuchaba", "tú": "escuchabas", "él/ella": "escuchaba", "nosotros": "escuchábamos", "vosotros": "escuchabais", "ellos": "escuchaban" }
+      }
+    },
+    {
+      "id": "ir",
+      "spanish": "ir",
+      "english": "to go",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "voy", "tú": "vas", "él/ella": "va", "nosotros": "vamos", "vosotros": "vais", "ellos": "van" },
+        "preterite": { "yo": "fui", "tú": "fuiste", "él/ella": "fue", "nosotros": "fuimos", "vosotros": "fuisteis", "ellos": "fueron" },
+        "imperfect": { "yo": "iba", "tú": "ibas", "él/ella": "iba", "nosotros": "íbamos", "vosotros": "ibais", "ellos": "iban" }
+      }
+    },
+    { "id": "futbol", "spanish": "fútbol", "english": "soccer", "type": "noun" },
+    { "id": "baloncesto", "spanish": "baloncesto", "english": "basketball", "type": "noun" },
+    { "id": "beisbol", "spanish": "béisbol", "english": "baseball", "type": "noun" },
+    { "id": "tenis", "spanish": "tenis", "english": "tennis", "type": "noun" },
+    { "id": "natacion", "spanish": "natación", "english": "swimming (sport)", "type": "noun" },
+    { "id": "pelicula", "spanish": "película", "english": "movie/film", "type": "noun" },
+    { "id": "musica", "spanish": "música", "english": "music", "type": "noun" },
+    { "id": "videojuegos", "spanish": "videojuegos", "english": "video games", "type": "noun" },
+    { "id": "equipo", "spanish": "equipo", "english": "team", "type": "noun" },
+    { "id": "parque", "spanish": "parque", "english": "park", "type": "noun" },
+    {
+    "id": "cocinar",
+    "spanish": "cocinar",
+    "english": "to cook",
+    "type": "verb",
+    "conjugations": {
+      "present": { "yo": "cocino", "tú": "cocinas", "él/ella": "cocina", "nosotros": "cocinamos", "vosotros": "cocináis", "ellos": "cocinan" },
+      "preterite": { "yo": "cociné", "tú": "cocinaste", "él/ella": "cocinó", "nosotros": "cocinamos", "vosotros": "cocinasteis", "ellos": "cocinaron" },
+      "imperfect": { "yo": "cocinaba", "tú": "cocinabas", "él/ella": "cocinaba", "nosotros": "cocinábamos", "vosotros": "cocinabais", "ellos": "cocinaban" }
+    }
+  },
+  {
+    "id": "dibujar",
+    "spanish": "dibujar",
+    "english": "to draw",
+    "type": "verb",
+    "conjugations": {
+      "present": { "yo": "dibujo", "tú": "dibujas", "él/ella": "dibuja", "nosotros": "dibujamos", "vosotros": "dibujáis", "ellos": "dibujan" },
+      "preterite": { "yo": "dibujé", "tú": "dibujaste", "él/ella": "dibujó", "nosotros": "dibujamos", "vosotros": "dibujasteis", "ellos": "dibujaron" },
+      "imperfect": { "yo": "dibujaba", "tú": "dibujabas", "él/ella": "dibujaba", "nosotros": "dibujábamos", "vosotros": "dibujabais", "ellos": "dibujaban" }
+    }
+  },
+  {
+    "id": "tocar",
+    "spanish": "tocar",
+    "english": "to play (an instrument)",
+    "type": "verb",
+    "conjugations": {
+      "present": { "yo": "toco", "tú": "tocas", "él/ella": "toca", "nosotros": "tocamos", "vosotros": "tocáis", "ellos": "tocan" },
+      "preterite": { "yo": "toqué", "tú": "tocaste", "él/ella": "tocó", "nosotros": "tocamos", "vosotros": "tocasteis", "ellos": "tocaron" },
+      "imperfect": { "yo": "tocaba", "tú": "tocabas", "él/ella": "tocaba", "nosotros": "tocábamos", "vosotros": "tocabais", "ellos": "tocaban" }
+    }
+  },
+  {
+    "id": "montar",
+    "spanish": "montar",
+    "english": "to ride (a bike/horse)",
+    "type": "verb",
+    "conjugations": {
+      "present": { "yo": "monto", "tú": "montas", "él/ella": "monta", "nosotros": "montamos", "vosotros": "montáis", "ellos": "montan" },
+      "preterite": { "yo": "monté", "tú": "montaste", "él/ella": "montó", "nosotros": "montamos", "vosotros": "montasteis", "ellos": "montaron" },
+      "imperfect": { "yo": "montaba", "tú": "montabas", "él/ella": "montaba", "nosotros": "montábamos", "vosotros": "montabais", "ellos": "montaban" }
+    }
+  },
+  {
+    "id": "patinar",
+    "spanish": "patinar",
+    "english": "to skate",
+    "type": "verb",
+    "conjugations": {
+      "present": { "yo": "patino", "tú": "patinas", "él/ella": "patina", "nosotros": "patinamos", "vosotros": "patináis", "ellos": "patinan" },
+      "preterite": { "yo": "patiné", "tú": "patinaste", "él/ella": "patinó", "nosotros": "patinamos", "vosotros": "patinasteis", "ellos": "patinaron" },
+      "imperfect": { "yo": "patinaba", "tú": "patinabas", "él/ella": "patinaba", "nosotros": "patinábamos", "vosotros": "patinabais", "ellos": "patinaban" }
+    }
+  },
+  { "id": "bicicleta", "spanish": "bicicleta", "english": "bicycle", "type": "noun" },
+  { "id": "gimnasio", "spanish": "gimnasio", "english": "gym", "type": "noun" },
+  { "id": "ajedrez", "spanish": "ajedrez", "english": "chess", "type": "noun" },
+  { "id": "fotografia", "spanish": "fotografía", "english": "photography", "type": "noun" },
+  { "id": "senderismo", "spanish": "senderismo", "english": "hiking", "type": "noun" }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Este fin de semana voy al parque con mi equipo para practicar fútbol.", "english": "This weekend I’m going to the park with my team to practice soccer.", "audioUrl": "" },
+    { "id": "p2", "spanish": "¿Quieres jugar al baloncesto el sábado por la tarde?", "english": "Do you want to play basketball on Saturday afternoon?", "audioUrl": "" },
+    { "id": "p3", "spanish": "Si llueve, mejor vemos una película y escuchamos música en mi casa.", "english": "If it rains, we’d better watch a movie and listen to music at my place.", "audioUrl": "" },
+    { "id": "p4", "spanish": "A mí me gusta correr en las mañanas, pero hoy practiqué natación.", "english": "I like to run in the mornings, but today I practiced swimming.", "audioUrl": "" },
+    { "id": "p5", "spanish": "Después del partido, vamos a comer y a hablar de los videojuegos nuevos.", "english": "After the game, we’re going to eat and talk about the new video games.", "audioUrl": "" },
+    { "id": "p6", "spanish": "Anoche vi una película y luego escribí un poco en mi diario.", "english": "Last night I watched a movie and then wrote a little in my journal.", "audioUrl": "" },
+    { "id": "p7", "spanish": "Cuando era niño, jugaba tenis con mi familia cada domingo.", "english": "When I was a kid, I used to play tennis with my family every Sunday.", "audioUrl": "" },
+    { "id": "p8", "spanish": "No puedo bailar el viernes porque tengo práctica con el equipo.", "english": "I can’t dance on Friday because I have practice with the team.", "audioUrl": "" },
+    { "id": "p9", "spanish": "Mañana vamos al parque; si te animas, trae tus tenis para correr.", "english": "Tomorrow we’re going to the park; if you’re up for it, bring your sneakers to run.", "audioUrl": "" },
+    { "id": "p10", "spanish": "Entonces, ¿vienes tú o vas a ver la película con tu familia?", "english": "So, are you coming or are you going to watch the movie with your family?", "audioUrl": "" },
+    { "id": "p11", "spanish": "Si tú juegas fútbol, yo puedo practicar baloncesto antes en el parque.", "english": "If you play soccer, I can practice basketball beforehand at the park.", "audioUrl": "" },
+    { "id": "p12", "spanish": "Voy con el equipo a las cinco; ¿vas tú también o prefieres ver una película?", "english": "I’m going with the team at five; are you going too or do you prefer to watch a movie?", "audioUrl": "" },
+    { "id": "p13", "spanish": "Trae agua y tus tenis, porque después de correr vamos a jugar tenis un rato.", "english": "Bring water and your sneakers, because after running we’re going to play tennis for a bit.", "audioUrl": "" },
+    { "id": "p14", "spanish": "Cuando éramos pequeños, veíamos películas y escuchábamos música después de los partidos.", "english": "When we were little, we used to watch movies and listen to music after the games.", "audioUrl": "" },
+    { "id": "p15", "spanish": "Ayer practiqué natación y hoy quiero bailar para relajarme.", "english": "Yesterday I practiced swimming and today I want to dance to relax.", "audioUrl": "" },
+    { "id": "p16", "spanish": "Si te cansas, podemos sentarnos a leer un poco en el parque.", "english": "If you get tired, we can sit and read a bit at the park.", "audioUrl": "" },
+    { "id": "p17", "spanish": "Después vamos a mi casa, vemos un partido de béisbol y luego escribimos las notas del juego.", "english": "Afterward we’ll go to my place, watch a baseball game, and then write up notes about the match.", "audioUrl": "" },
+    { "id": "p18", "spanish": "¿Te animas a correr temprano y luego practicar con el equipo?", "english": "Are you up for running early and then practicing with the team?", "audioUrl": "" },
+    { "id": "p19", "spanish": "El sábado no fui al parque, pero el domingo jugué baloncesto y lo pasé muy bien.", "english": "On Saturday I didn’t go to the park, but on Sunday I played basketball and had a great time.", "audioUrl": "" },
+    { "id": "p20", "spanish": "Si llueve otra vez, mejor vemos una película y jugamos a los videojuegos.", "english": "If it rains again, we’d better watch a movie and play video games.", "audioUrl": "" }
+  ]
+}
