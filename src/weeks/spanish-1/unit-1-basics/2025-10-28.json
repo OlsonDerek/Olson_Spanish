@@ -1,0 +1,133 @@
+{
+  "id": "2025-10-28",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 10: Lugares y Direcciones",
+  "startDate": "2025-10-28",
+  "endDate": "2025-11-03",
+  "vocab": [
+    {
+      "id": "ir",
+      "spanish": "ir",
+      "english": "to go",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "voy", "tú": "vas", "él/ella": "va", "nosotros": "vamos", "vosotros": "vais", "ellos": "van" },
+        "preterite": { "yo": "fui", "tú": "fuiste", "él/ella": "fue", "nosotros": "fuimos", "vosotros": "fuisteis", "ellos": "fueron" },
+        "imperfect": { "yo": "iba", "tú": "ibas", "él/ella": "iba", "nosotros": "íbamos", "vosotros": "ibais", "ellos": "iban" }
+      }
+    },
+    {
+      "id": "caminar",
+      "spanish": "caminar",
+      "english": "to walk",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "camino", "tú": "caminas", "él/ella": "camina", "nosotros": "caminamos", "vosotros": "camináis", "ellos": "caminan" },
+        "preterite": { "yo": "caminé", "tú": "caminaste", "él/ella": "caminó", "nosotros": "caminamos", "vosotros": "caminasteis", "ellos": "caminaron" },
+        "imperfect": { "yo": "caminaba", "tú": "caminabas", "él/ella": "caminaba", "nosotros": "caminábamos", "vosotros": "caminabais", "ellos": "caminaban" }
+      }
+    },
+    {
+      "id": "doblar",
+      "spanish": "doblar",
+      "english": "to turn (right/left)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "doblo", "tú": "doblas", "él/ella": "dobla", "nosotros": "doblamos", "vosotros": "dobláis", "ellos": "doblan" },
+        "preterite": { "yo": "doblé", "tú": "doblaste", "él/ella": "dobló", "nosotros": "doblamos", "vosotros": "doblasteis", "ellos": "doblaron" },
+        "imperfect": { "yo": "doblaba", "tú": "doblabas", "él/ella": "doblaba", "nosotros": "doblábamos", "vosotros": "doblabais", "ellos": "doblaban" }
+      }
+    },
+    {
+      "id": "cruzar",
+      "spanish": "cruzar",
+      "english": "to cross",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "cruzo", "tú": "cruzas", "él/ella": "cruza", "nosotros": "cruzamos", "vosotros": "cruzáis", "ellos": "cruzan" },
+        "preterite": { "yo": "crucé", "tú": "cruzaste", "él/ella": "cruzó", "nosotros": "cruzamos", "vosotros": "cruzasteis", "ellos": "cruzaron" },
+        "imperfect": { "yo": "cruzaba", "tú": "cruzabas", "él/ella": "cruzaba", "nosotros": "cruzábamos", "vosotros": "cruzabais", "ellos": "cruzaban" }
+      }
+    },
+    {
+      "id": "seguir",
+      "spanish": "seguir",
+      "english": "to continue / follow",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "sigo", "tú": "sigues", "él/ella": "sigue", "nosotros": "seguimos", "vosotros": "seguís", "ellos": "siguen" },
+        "preterite": { "yo": "seguí", "tú": "seguiste", "él/ella": "siguió", "nosotros": "seguimos", "vosotros": "seguisteis", "ellos": "siguieron" },
+        "imperfect": { "yo": "seguía", "tú": "seguías", "él/ella": "seguía", "nosotros": "seguíamos", "vosotros": "seguíais", "ellos": "seguían" }
+      }
+    },
+    {
+      "id": "buscar",
+      "spanish": "buscar",
+      "english": "to look for",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "busco", "tú": "buscas", "él/ella": "busca", "nosotros": "buscamos", "vosotros": "buscáis", "ellos": "buscan" },
+        "preterite": { "yo": "busqué", "tú": "buscaste", "él/ella": "buscó", "nosotros": "buscamos", "vosotros": "buscasteis", "ellos": "buscaron" },
+        "imperfect": { "yo": "buscaba", "tú": "buscabas", "él/ella": "buscaba", "nosotros": "buscábamos", "vosotros": "buscabais", "ellos": "buscaban" }
+      }
+    },
+    {
+      "id": "encontrar",
+      "spanish": "encontrar",
+      "english": "to find",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "encuentro", "tú": "encuentras", "él/ella": "encuentra", "nosotros": "encontramos", "vosotros": "encontráis", "ellos": "encuentran" },
+        "preterite": { "yo": "encontré", "tú": "encontraste", "él/ella": "encontró", "nosotros": "encontramos", "vosotros": "encontrasteis", "ellos": "encontraron" },
+        "imperfect": { "yo": "encontraba", "tú": "encontrabas", "él/ella": "encontraba", "nosotros": "encontrábamos", "vosotros": "encontrabais", "ellos": "encontraban" }
+      }
+    },
+    {
+      "id": "quedar",
+      "spanish": "quedar",
+      "english": "to be located / to stay",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "quedo", "tú": "quedas", "él/ella": "queda", "nosotros": "quedamos", "vosotros": "quedáis", "ellos": "quedan" },
+        "preterite": { "yo": "quedé", "tú": "quedaste", "él/ella": "quedó", "nosotros": "quedamos", "vosotros": "quedasteis", "ellos": "quedaron" },
+        "imperfect": { "yo": "quedaba", "tú": "quedabas", "él/ella": "quedaba", "nosotros": "quedábamos", "vosotros": "quedabais", "ellos": "quedaban" }
+      }
+    },
+    { "id": "derecha", "spanish": "derecha", "english": "right (direction)", "type": "noun" },
+    { "id": "izquierda", "spanish": "izquierda", "english": "left (direction)", "type": "noun" },
+    { "id": "cerca", "spanish": "cerca", "english": "near/close", "type": "adverb" },
+    { "id": "lejos", "spanish": "lejos", "english": "far", "type": "adverb" },
+    { "id": "baño", "spanish": "baño", "english": "bathroom", "type": "noun" },
+
+    { "id": "biblioteca", "spanish": "biblioteca", "english": "library", "type": "noun" },
+    { "id": "calle", "spanish": "calle", "english": "street", "type": "noun" },
+    { "id": "restaurante", "spanish": "restaurante", "english": "restaurant", "type": "noun" },
+    { "id": "plaza", "spanish": "plaza", "english": "town square", "type": "noun" },
+    { "id": "parque", "spanish": "parque", "english": "park", "type": "noun" },
+    { "id": "esquina", "spanish": "esquina", "english": "corner (street)", "type": "noun" },
+    { "id": "cine", "spanish": "cine", "english": "movie theater", "type": "noun" },
+    { "id": "farmacia", "spanish": "farmacia", "english": "pharmacy", "type": "noun" },
+    { "id": "hospital", "spanish": "hospital", "english": "hospital", "type": "noun" },
+    { "id": "iglesia", "spanish": "iglesia", "english": "church", "type": "noun" },
+    { "id": "estacion", "spanish": "estación", "english": "station (bus/train)", "type": "noun" },
+    { "id": "supermercado", "spanish": "supermercado", "english": "supermarket", "type": "noun" }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Perdón, ¿dónde está la biblioteca?", "english": "Excuse me, where is the library?", "audioUrl": "" },
+    { "id": "p2", "spanish": "¿Cómo llego al parque desde esta calle?", "english": "How do I get to the park from this street?", "audioUrl": "" },
+    { "id": "p3", "spanish": "Doble a la derecha en la esquina y siga hasta el final.", "english": "Turn right at the corner and continue to the end.", "audioUrl": "" },
+    { "id": "p4", "spanish": "El restaurante queda cerca del cine.", "english": "The restaurant is located near the movie theater.", "audioUrl": "" },
+    { "id": "p5", "spanish": "La farmacia está enfrente del hospital.", "english": "The pharmacy is across from the hospital.", "audioUrl": "" },
+    { "id": "p6", "spanish": "Vamos a la iglesia a pie.", "english": "We’re going to the church on foot.", "audioUrl": "" },
+    { "id": "p7", "spanish": "Busco la estación de autobús; ¿está lejos?", "english": "I’m looking for the bus station; is it far?", "audioUrl": "" },
+    { "id": "p8", "spanish": "Cruza la calle y encontrarás el supermercado.", "english": "Cross the street and you’ll find the supermarket.", "audioUrl": "" },
+    { "id": "p9", "spanish": "¿Hay un baño en la plaza?", "english": "Is there a bathroom in the town square?", "audioUrl": "" },
+    { "id": "p10", "spanish": "Voy al banco; ¿quieres ir conmigo?", "english": "I’m going to the bank; do you want to go with me?", "audioUrl": "" },
+    { "id": "p11", "spanish": "Ayer fuimos al museo y luego al restaurante.", "english": "Yesterday we went to the museum and then to the restaurant.", "audioUrl": "" },
+    { "id": "p12", "spanish": "Antes íbamos en coche, pero hoy caminamos.", "english": "We used to go by car, but today we’re walking.", "audioUrl": "" },
+    { "id": "p13", "spanish": "La escuela queda al lado de la biblioteca.", "english": "The school is next to the library.", "audioUrl": "" },
+    { "id": "p14", "spanish": "Sigue hasta el semáforo y dobla a la izquierda.", "english": "Continue to the traffic light and turn left.", "audioUrl": "" },
+    { "id": "p15", "spanish": "Si te pierdes, busca la plaza y pregunta allí.", "english": "If you get lost, look for the town square and ask there.", "audioUrl": "" }
+  ]
+}
