@@ -1,0 +1,103 @@
+{
+  "id": "2025-11-04",
+  "courseId": "spanish-1",
+  "unitId": "unit-1-basics",
+  "title": "Week 11: El tiempo y las estaciones",
+  "startDate": "2025-11-04",
+  "endDate": "2025-11-10",
+  "vocab": [
+    { "id": "primavera", "spanish": "la primavera", "english": "spring", "type": "noun" },
+    { "id": "verano", "spanish": "el verano", "english": "summer", "type": "noun" },
+    { "id": "otonio", "spanish": "el otoño", "english": "autumn/fall", "type": "noun" },
+    { "id": "invierno", "spanish": "el invierno", "english": "winter", "type": "noun" },
+    { "id": "clima", "spanish": "el clima", "english": "climate/weather", "type": "noun" },
+    { "id": "pronostico", "spanish": "el pronóstico", "english": "forecast", "type": "noun" },
+    { "id": "temperatura", "spanish": "la temperatura", "english": "temperature", "type": "noun" },
+    { "id": "tormenta", "spanish": "la tormenta", "english": "storm", "type": "noun" },
+    { "id": "viento", "spanish": "el viento", "english": "wind", "type": "noun" },
+    { "id": "lluvia", "spanish": "la lluvia", "english": "rain", "type": "noun" },
+    { "id": "nieve", "spanish": "la nieve", "english": "snow", "type": "noun" },
+    { "id": "sol", "spanish": "el sol", "english": "sun", "type": "noun" },
+    { "id": "paraguas", "spanish": "el paraguas", "english": "umbrella", "type": "noun" },
+    { "id": "abrigo", "spanish": "el abrigo", "english": "coat", "type": "noun" },
+
+    {
+      "id": "hacer",
+      "spanish": "hacer",
+      "english": "to do/make (used in weather: hace frío/calor)",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "hago", "tú": "haces", "él/ella": "hace", "nosotros": "hacemos", "vosotros": "hacéis", "ellos": "hacen" },
+        "preterite": { "yo": "hice", "tú": "hiciste", "él/ella": "hizo", "nosotros": "hicimos", "vosotros": "hicisteis", "ellos": "hicieron" },
+        "imperfect": { "yo": "hacía", "tú": "hacías", "él/ella": "hacía", "nosotros": "hacíamos", "vosotros": "hacíais", "ellos": "hacían" }
+      }
+    },
+    {
+      "id": "llover",
+      "spanish": "llover",
+      "english": "to rain",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "lluevo", "tú": "llueves", "él/ella": "llueve", "nosotros": "llovemos", "vosotros": "llovéis", "ellos": "llueven" },
+        "preterite": { "yo": "lloví", "tú": "lloviste", "él/ella": "llovió", "nosotros": "llovimos", "vosotros": "llovisteis", "ellos": "llovieron" },
+        "imperfect": { "yo": "llovía", "tú": "llovías", "él/ella": "llovía", "nosotros": "llovíamos", "vosotros": "llovíais", "ellos": "llovían" }
+      }
+    },
+    {
+      "id": "nevar",
+      "spanish": "nevar",
+      "english": "to snow",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "nievo", "tú": "nievas", "él/ella": "nieva", "nosotros": "nevamos", "vosotros": "neváis", "ellos": "nievan" },
+        "preterite": { "yo": "nevé", "tú": "nevaste", "él/ella": "nevó", "nosotros": "nevamos", "vosotros": "nevasteis", "ellos": "nevaron" },
+        "imperfect": { "yo": "nevaba", "tú": "nevabas", "él/ella": "nevaba", "nosotros": "nevábamos", "vosotros": "nevabais", "ellos": "nevaban" }
+      }
+    },
+    {
+      "id": "gustar",
+      "spanish": "gustar",
+      "english": "to please/like",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "gusto", "tú": "gustas", "él/ella": "gusta", "nosotros": "gustamos", "vosotros": "gustáis", "ellos": "gustan" },
+        "preterite": { "yo": "gusté", "tú": "gustaste", "él/ella": "gustó", "nosotros": "gustamos", "vosotros": "gustasteis", "ellos": "gustaron" },
+        "imperfect": { "yo": "gustaba", "tú": "gustabas", "él/ella": "gustaba", "nosotros": "gustábamos", "vosotros": "gustabais", "ellos": "gustaban" }
+      }
+    },
+    {
+      "id": "llevar",
+      "spanish": "llevar",
+      "english": "to wear/carry",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "llevo", "tú": "llevas", "él/ella": "lleva", "nosotros": "llevamos", "vosotros": "lleváis", "ellos": "llevan" },
+        "preterite": { "yo": "llevé", "tú": "llevaste", "él/ella": "llevó", "nosotros": "llevamos", "vosotros": "llevasteis", "ellos": "llevaron" },
+        "imperfect": { "yo": "llevaba", "tú": "llevabas", "él/ella": "llevaba", "nosotros": "llevábamos", "vosotros": "llevabais", "ellos": "llevaban" }
+      }
+    },
+    {
+      "id": "planear",
+      "spanish": "planear",
+      "english": "to plan",
+      "type": "verb",
+      "conjugations": {
+        "present": { "yo": "planeo", "tú": "planeas", "él/ella": "planea", "nosotros": "planeamos", "vosotros": "planeáis", "ellos": "planean" },
+        "preterite": { "yo": "planeé", "tú": "planeaste", "él/ella": "planeó", "nosotros": "planeamos", "vosotros": "planeasteis", "ellos": "planearon" },
+        "imperfect": { "yo": "planeaba", "tú": "planeabas", "él/ella": "planeaba", "nosotros": "planeábamos", "vosotros": "planeabais", "ellos": "planeaban" }
+      }
+    }
+  ],
+  "phrases": [
+    { "id": "p1", "spanish": "Hoy el pronóstico dice que hace frío y viento, así que llevo abrigo.", "english": "Today the forecast says it’s cold and windy, so I’m wearing a coat.", "audioUrl": "" },
+    { "id": "p2", "spanish": "En invierno nieva mucho; me gusta mirar la nieve desde la ventana.", "english": "In winter it snows a lot; I like to watch the snow from the window.", "audioUrl": "" },
+    { "id": "p3", "spanish": "Si llueve, llevo paraguas para la actividad de la iglesia.", "english": "If it rains, I bring an umbrella for the church activity.", "audioUrl": "" },
+    { "id": "p4", "spanish": "En primavera el clima es variable: a veces hay sol y luego llueve.", "english": "In spring the weather is variable: sometimes it’s sunny and then it rains.", "audioUrl": "" },
+    { "id": "p5", "spanish": "El verano me gusta porque la temperatura es alta y hay mucho sol.", "english": "I like summer because the temperature is high and there’s lots of sun.", "audioUrl": "" },
+    { "id": "p6", "spanish": "El otoño es mi estación favorita; el viento enfría el aire.", "english": "Fall is my favorite season; the wind cools the air.", "audioUrl": "" },
+    { "id": "p7", "spanish": "Según el pronóstico, va a llover por la tarde; planeo quedarme en casa.", "english": "According to the forecast, it’s going to rain in the afternoon; I plan to stay home.", "audioUrl": "" },
+    { "id": "p8", "spanish": "Cuando hay tormenta fuerte, cancelamos el partido para estar seguros.", "english": "When there’s a strong storm, we cancel the game to stay safe.", "audioUrl": "" },
+    { "id": "p9", "spanish": "Para la Noche de Hogar al aire libre, primero reviso el pronóstico y hago los planes.", "english": "For outdoor Family Home Evening, I first check the forecast and make the plans.", "audioUrl": "" },
+    { "id": "p10", "spanish": "Si hace buen clima el sábado, planeamos un paseo por el parque.", "english": "If the weather is nice on Saturday, we’re planning a walk in the park.", "audioUrl": "" }
+  ]
+}
